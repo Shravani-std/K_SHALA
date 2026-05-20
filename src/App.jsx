@@ -17,7 +17,8 @@ const TermsConditions = lazy(() => import("./Pages/TermsConditions"));
 const Support = lazy(() => import("./Pages/Support"));
 const Contact = lazy(() => import("./Pages/Contact"));
 const About = lazy(() => import("./Pages/About"));
-const EnrollmentPage = lazy(() => import("./pages/EnrollmentPage"));
+
+const EnrollmentPage = lazy(() => import("./Pages/EnrollmentPage"));
 
 
 function App() {
