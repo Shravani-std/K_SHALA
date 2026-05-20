@@ -1,0 +1,232 @@
+.legal-page {
+  min-height: 100vh;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  background:
+    radial-gradient(circle at top left, rgba(0, 207, 255, 0.12), transparent 30%),
+    radial-gradient(circle at bottom right, rgba(255, 159, 28, 0.08), transparent 25%),
+    linear-gradient(135deg, #020617, #04122b, #071a36);
+}
+
+.legal-nav {
+  padding: 20px 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+  background: rgba(2, 6, 23, 0.75);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(0, 207, 255, 0.15);
+}
+
+.legal-nav .logo {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  text-decoration: none;
+  color: inherit;
+}
+
+.legal-nav .logo-box {
+  width: 70px;
+  height: 70px;
+}
+
+.legal-nav .logo-img {
+  width: 100%;
+  height: 100%;
+  border-radius: 25px;
+}
+
+.legal-nav .logo h2 {
+  font-size: 28px;
+  font-weight: 700;
+  background: linear-gradient(90deg, #ffffff, #38bdf8, #00cfff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.legal-nav .logo p {
+  font-size: 12px;
+  color: #cbd5e1;
+}
+
+.legal-nav-home {
+  color: #00cfff;
+  text-decoration: none;
+  font-size: 17px;
+  font-weight: 500;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.legal-nav-home:hover {
+  color: #ff9f1c;
+  text-shadow: 0 0 10px rgba(255, 159, 28, 0.35);
+}
+
+.legal-main {
+  flex: 1;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px 40px 60px;
+  width: 100%;
+  animation: fadeInUp 0.7s ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.legal-main h1 {
+  font-size: 42px;
+  margin-bottom: 12px;
+  color: #ffffff;
+  font-weight: 800;
+}
+
+.legal-main h1 span {
+  background: linear-gradient(90deg, #38bdf8, #00cfff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.legal-intro {
+  color: #cbd5e1;
+  font-size: 18px;
+  line-height: 1.8;
+  margin-bottom: 40px;
+}
+
+.legal-section {
+  margin-bottom: 36px;
+  padding: 28px 32px;
+  border-radius: 20px;
+  background: rgba(8, 20, 40, 0.8);
+  border: 1px solid rgba(0, 207, 255, 0.2);
+  box-shadow: 0 0 20px rgba(0, 207, 255, 0.08);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.legal-section:hover {
+  border-color: rgba(0, 207, 255, 0.35);
+  box-shadow: 0 0 28px rgba(0, 207, 255, 0.12);
+}
+
+.legal-section h2 {
+  font-size: 22px;
+  color: #00cfff;
+  margin-bottom: 14px;
+  font-weight: 600;
+}
+
+.legal-section h3 {
+  font-size: 18px;
+  color: #38bdf8;
+  margin: 20px 0 10px;
+  font-weight: 600;
+}
+
+.legal-section p {
+  color: #cbd5e1;
+  font-size: 16px;
+  line-height: 1.8;
+  margin-bottom: 12px;
+}
+
+.legal-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 12px;
+}
+
+.legal-section ul li {
+  color: #cbd5e1;
+  font-size: 16px;
+  line-height: 1.8;
+  padding-left: 20px;
+  position: relative;
+  margin-bottom: 8px;
+}
+
+.legal-section ul li::before {
+  content: "•";
+  color: #00cfff;
+  position: absolute;
+  left: 0;
+}
+
+.legal-section ol {
+  padding-left: 24px;
+  margin: 0 0 12px;
+}
+
+.legal-section ol li {
+  color: #cbd5e1;
+  font-size: 16px;
+  line-height: 1.8;
+  margin-bottom: 10px;
+}
+
+.legal-contact p {
+  margin-bottom: 6px;
+}
+
+.legal-contact a {
+  color: #00cfff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.legal-contact a:hover {
+  color: #ff9f1c;
+}
+
+@media (max-width: 768px) {
+  .legal-nav {
+    padding: 16px 24px;
+  }
+
+  .legal-main {
+    padding: 16px 24px 48px;
+  }
+
+  .legal-main h1 {
+    font-size: 28px;
+  }
+
+  .legal-intro {
+    font-size: 16px;
+  }
+
+  .legal-section {
+    padding: 20px 22px;
+  }
+
+  .legal-section h2 {
+    font-size: 19px;
+  }
+
+  .legal-section p,
+  .legal-section ul li,
+  .legal-section ol li {
+    font-size: 15px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .legal-main {
+    animation: none;
+  }
+}

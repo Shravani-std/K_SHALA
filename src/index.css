@@ -1,0 +1,64 @@
+:root {
+  --bg-deep: #050816;
+  --bg-mid: #0B1220;
+  --card-bg: rgba(17, 24, 39, 0.7);
+  --primary-orange: #FF7A00;
+  --deep-orange: #FF5C00;
+  --soft-gold: #FFC76A;
+  --text-primary: #FFFFFF;
+  --text-muted: #BFC7D5;
+  --border-glow: rgba(255, 122, 0, 0.35);
+  --border-subtle: rgba(255, 122, 0, 0.22);
+  --nav-glass: rgba(5, 8, 22, 0.72);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Safe responsive defaults: prevent production-only browser scaling issues */
+html {
+  width: 100%;
+  overflow-x: hidden;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+body {
+  width: 100%;
+  margin: 0;
+  overflow-x: hidden;
+  max-width: 100%;
+}
+
+html, body {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: var(--bg-deep);
+  color: var(--text-primary);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+

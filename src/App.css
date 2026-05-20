@@ -1,0 +1,72 @@
+.App {
+  text-align: center;
+  position: relative;
+  background: transparent;
+}
+
+/* Global theme fallbacks (keeps App-level background consistent) */
+:root {
+  --bg-deep: var(--bg-deep, #050816);
+  --bg-mid: var(--bg-mid, #0B1220);
+  --card-bg: var(--card-bg, rgba(17, 24, 39, 0.7));
+  --primary-orange: var(--primary-orange, #FF7A00);
+  --deep-orange: var(--deep-orange, #FF5C00);
+  --soft-gold: var(--soft-gold, #FFC76A);
+  --text-primary: var(--text-primary, #FFFFFF);
+  --text-muted: var(--text-muted, #BFC7D5);
+  --border-glow: var(--border-glow, rgba(255, 122, 0, 0.35));
+  --border-subtle: var(--border-subtle, rgba(255, 122, 0, 0.22));
+  --nav-glass: var(--nav-glass, rgba(5, 8, 22, 0.72));
+}
+
+
+/* Dedicated background animation layer (must stay behind ALL content) */
+.bg-anim-layer {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+/* Ensure all routes/content render above the background animation */
+.app-content {
+  position: relative;
+  z-index: 2;
+}
+
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
