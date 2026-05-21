@@ -237,6 +237,7 @@ body {
   padding-right: 10px;
   min-height: 70vh;
   position: relative;
+  /* background: linear-gradient(to bottom, #021526, #03346E); */
   animation: fadeInUp 0.7s ease-out;
 }
 

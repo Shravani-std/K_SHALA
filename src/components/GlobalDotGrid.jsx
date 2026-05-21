@@ -5,7 +5,22 @@ const GlobalDotGrid = () => {
   const mouse = useRef({ x: -9999, y: -9999 });
   const heroElRef = useRef(null);
   const planetElRef = useRef(null);
+  const isMobile =
+    typeof window !== "undefined" && window.innerWidth < 1024;
 
+  if (isMobile) {
+  return (
+    <div
+      style={{
+        position: "fixed",
+        inset: 0,
+        background: "linear-gradient(to bottom, #021526, #03346E)",
+        zIndex: 1,
+      }}
+    />
+  );
+}
+ 
   useEffect(() => {
     const canvas = canvasRef.current;
     if (!canvas) return;
@@ -51,7 +66,7 @@ const GlobalDotGrid = () => {
     window.addEventListener('message', handleMessage);
 
 
-    const SPACING = isMobile ? 60 : 45; // Reduced particle count (was 30)
+    const SPACING = isMobile ? 120 : 60; // Reduced particle count (was 30)
     const DOT_R   = 1.1;
 
     /* ─────────── Wave layer definitions ───
@@ -69,6 +84,7 @@ const GlobalDotGrid = () => {
     const GLOW_R = () => Math.max(canvas.width, canvas.height) * 0.35;
 
     const draw = () => {
+    
       ctx.clearRect(0, 0, canvas.width, canvas.height);
       time += 1;
 
@@ -327,7 +343,7 @@ const GlobalDotGrid = () => {
         height: '100%',
         pointerEvents: 'none',
         zIndex: 1,
-        mixBlendMode: 'screen',
+        // mixBlendMode: 'screen',
 
       }}
     />
