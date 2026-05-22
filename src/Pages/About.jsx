@@ -16,6 +16,9 @@ import Footer from "./Footer";
 import BackButton from "../components/BackButton";
 import "./Home.css";
 import "./About.css";
+import aboutVideo from "./video/K_Shala_Introduction_test_2_with_captions (2).mp4"
+
+
 
 const OFFERINGS = [
   {
@@ -129,25 +132,66 @@ const About = () => {
           <div className="about-hero-glow" aria-hidden="true" />
         </section>
 
-        <section className="about-section about-intro">
-          <div className="about-glass-card about-intro-card">
-            <span className="about-section-tag">About Us</span>
-            <h2 className="about-card-title">Welcome to K-Shala</h2>
-            <p>
-              K-Shala is a modern digital learning platform dedicated to
-              transforming education through smart technology, interactive
-              learning, and student-focused teaching methods. Our mission is to
-              make quality education accessible, engaging, and effective for
-              every student across Maharashtra and India.
-            </p>
-            <p>
-              We provide complete learning solutions for students from Class 1st
-              to 12th with NCERT and Maharashtra Board syllabus coverage, helping
-              learners build strong concepts, improve academic performance, and
-              prepare confidently for future success.
-            </p>
-          </div>
-        </section>
+
+
+
+
+
+  <section className="about-section about-intro-wrapper">
+
+  {/* LEFT SECTION */}
+  <section className="about-left-section">
+    <div className="about-glass-card about-intro-card">
+
+      <span className="about-section-tag">
+        About Us
+      </span>
+
+      <h2 className="about-card-title">
+        Welcome to K-Shala
+      </h2>
+
+      <p>
+        K-Shala is a modern digital learning platform dedicated to
+        transforming education through smart technology, interactive
+        learning, and student-focused teaching methods. Our mission is to
+        make quality education accessible, engaging, and effective for
+        every student across Maharashtra and India.
+      </p>
+
+      <p>
+        We provide complete learning solutions for students from Class 1st
+        to 12th with NCERT and Maharashtra Board syllabus coverage,
+        helping learners build strong concepts, improve academic
+        performance, and prepare confidently for future success.
+      </p>
+
+    </div>
+  </section>
+
+  {/* RIGHT SECTION */}
+  <section className="about-right-section">
+
+    <video
+      autoPlay
+      muted
+      loop
+      playsInline
+      controls
+      className="about-side-video"
+    >
+      <source src={aboutVideo} type="video/mp4" />
+    </video>
+
+  </section>
+
+</section>
+
+
+
+
+
+
 
         <section className="about-section about-vision-mission">
           <div className="about-vm-grid">

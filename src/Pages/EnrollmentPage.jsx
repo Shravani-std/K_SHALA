@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import BackButton from "../components/BackButton";
 import "./EnrollmentPage.css";
@@ -14,13 +14,71 @@ const defaultCourseFallback = {
   iconLetter: "E",
 };
 
+const Field = ({
+label,
+placeholder,
+value,
+onChange,
+type = "text",
+name,
+required = false,
+}) => (
+<label className="field">
+  <span className="label">
+    {label}
+    {required ? <em aria-hidden="true">*</em> : null}
+  </span>
+
+  <input
+    className="input"
+    placeholder={placeholder}
+    value={value}
+    onChange={onChange}
+    type={type}
+    name={name}
+    required={required}
+    autoComplete="off"
+  />
+</label>
+);
+
+const TextArea = ({ label, placeholder, value, onChange, name, required = false }) => (
+  <label className="field">
+    <span className="label">{label}{required ? <em aria-hidden="true">*</em> : null}</span>
+    <textarea
+className="textarea"
+placeholder={placeholder}
+value={value}
+onChange={onChange}
+name={name}
+required={required}
+autoComplete="off"
+/>
+  </label>
+);
+
+const Select = ({ label, value, onChange, options, required = false }) => (
+  <label className="field">
+    <span className="label">{label}{required ? <em aria-hidden="true">*</em> : null}</span>
+    <select className="select" value={value} onChange={onChange}>
+      <option value="" disabled>
+        Select...
+      </option>
+      {options.map((o) => (
+        <option key={o.value} value={o.value}>
+          {o.label}
+        </option>
+      ))}
+    </select>
+  </label>
+);
 const EnrollmentPage = () => {
   const location = useLocation();
   const navigate = useNavigate();
 
-  const incomingCourse = location?.state?.course;
-  const course = useMemo(() => incomingCourse || defaultCourseFallback, [incomingCourse]);
-
+  const [course] = useState(
+  location?.state?.course || defaultCourseFallback
+);
   const [form, setForm] = useState({
     fullName: "",
     email: "",
@@ -55,9 +113,19 @@ const EnrollmentPage = () => {
   const iconLetter = (course?.iconLetter || courseTitle?.charAt(0) || "E").toString().toUpperCase();
 
   const update = (key) => (e) => {
-    const value = e?.target?.type === "checkbox" ? e.target.checked : e.target.value;
-    setForm((prev) => ({ ...prev, [key]: value }));
-  };
+
+  const value =
+    e?.target?.type === "checkbox"
+      ? e.target.checked
+      : e.target.value;
+
+  console.log(key, value);
+
+  setForm((prev) => ({
+    ...prev,
+    [key]: value,
+  }));
+};
 
   const canSubmit =
     form.fullName.trim() &&
@@ -73,58 +141,43 @@ const EnrollmentPage = () => {
     form.heardAbout.trim() &&
     form.terms;
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) =>{
     e.preventDefault();
-    if (!canSubmit) return;
+    if(!canSubmit) return;
 
-    // No backend/payment in this UI-only task.
-    setSubmitted(true);
-    // Keep user on page; show premium confirmation.
-    // Future integration: POST to enroll endpoint.
-  };
+    try {
 
-  const Field = ({ label, placeholder, value, onChange, type = "text", name, required = false }) => (
-    <label className="field">
-      <span className="label">{label}{required ? <em aria-hidden="true">*</em> : null}</span>
-      <input
-        className="input"
-        placeholder={placeholder}
-        value={value}
-        onChange={onChange}
-        type={type}
-        name={name}
-      />
-    </label>
-  );
+    const response = await fetch(
+      "http://localhost:5000/api/enroll",
+      {
+        method: "POST",
 
-  const TextArea = ({ label, placeholder, value, onChange, name, required = false }) => (
-    <label className="field">
-      <span className="label">{label}{required ? <em aria-hidden="true">*</em> : null}</span>
-      <textarea
-        className="textarea"
-        placeholder={placeholder}
-        value={value}
-        onChange={onChange}
-        name={name}
-      />
-    </label>
-  );
+        headers: {
+          "Content-Type": "application/json",
+        },
 
-  const Select = ({ label, value, onChange, options, required = false }) => (
-    <label className="field">
-      <span className="label">{label}{required ? <em aria-hidden="true">*</em> : null}</span>
-      <select className="select" value={value} onChange={onChange}>
-        <option value="" disabled>
-          Select...
-        </option>
-        {options.map((o) => (
-          <option key={o.value} value={o.value}>
-            {o.label}
-          </option>
-        ))}
-      </select>
-    </label>
-  );
+        body: JSON.stringify({
+          ...form,
+          courseTitle,
+        }),
+      }
+    );
+    const data = await response.json();
+    if (data.success){
+      setSubmitted(true);
+      console.log(data.message)
+    }
+    else{
+      alert("Submission Failed");
+    }
+  }
+  catch(error){
+    console.log(error);
+    alert("Server Error");
+  }
+
+  }
+
 
   const chipList = (arr) => (
     <div className="chip-row">
@@ -224,7 +277,13 @@ const EnrollmentPage = () => {
                 </div>
               </div>
             ) : (
-              <form className="enroll-form" onSubmit={handleSubmit}>
+              <form
+  className="enroll-form"
+  onSubmit={(e) => {
+    e.preventDefault();
+    handleSubmit(e);
+  }}
+>
                 <section className="form-section">
                   <div className="section-header">
                     <div className="section-title">SECTION 1 — Personal Information</div>
@@ -419,7 +478,7 @@ const EnrollmentPage = () => {
                     <button
                       className={`submit-btn ${canSubmit ? "submit-btn--active" : ""}`}
                       type="submit"
-                      disabled={!canSubmit}
+                      disabled={false}
                     >
                       <span className="submit-btn-text">Submit Enrollment</span>
                       <span className="submit-btn-arrow" aria-hidden="true">
