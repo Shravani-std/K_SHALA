@@ -331,9 +331,9 @@ const EnrollmentPage = () => {
                       onChange={update("gender")}
                       required
                       options={[
-                        { value: "male", label: "Male" },
-                        { value: "female", label: "Female" },
-                        { value: "other", label: "Other" },
+                        { value: "Male", label: "Male" },
+                        { value: "Female", label: "Female" },
+                        { value: "Other", label: "Other" },
                       ]}
                     />
                     <TextArea
@@ -354,14 +354,21 @@ const EnrollmentPage = () => {
                   </div>
 
                   <div className="fields-grid">
-                    <Field
-                      label="Highest Qualification"
-                      placeholder="e.g. B.Tech / Diploma / Graduation"
-                      value={form.highestQualification}
-                      onChange={update("highestQualification")}
-                      required
-                      name="highestQualification"
-                    />
+                    <Select
+                        label="Highest Qualification"
+                        value={form.highestQualification}
+                        onChange={update("highestQualification")}
+                        required
+                        options={[
+                          { value: "10th", label: "10th" },
+                          { value: "12th", label: "12th" },
+                          { value: "Diploma", label: "Diploma" },
+                          { value: "Undergraduate", label: "Undergraduate" },
+                          { value: "Postgraduate", label: "Postgraduate" },
+                          { value: "PhD", label: "PhD" },
+                          { value: "Other", label: "Other" },
+                        ]}
+                      />
                     <Field
                       label="University / College"
                       placeholder="e.g. ABC University"
@@ -422,11 +429,12 @@ const EnrollmentPage = () => {
 
                   <div className="radio-grid" role="radiogroup" aria-label="Batch timing">
                     {[
-                      { value: "morning", label: "Morning" },
-                      { value: "afternoon", label: "Afternoon" },
-                      { value: "evening", label: "Evening" },
-                      { value: "weekend", label: "Weekend" },
-                    ].map((opt, idx) => (
+                      { value: "Morning", label: "Morning" },
+                      { value: "Afternoon", label: "Afternoon" },
+                      { value: "Evening", label: "Evening" },
+                      { value: "Weekend", label: "Weekend" },
+                    ] 
+                    .map((opt, idx) => (
                       <label key={opt.value} className="radio-card">
                         <input
                           type="radio"

@@ -47,19 +47,60 @@ const initialForm = {
 };
 
 const Contact = () => {
+
   const [form, setForm] = useState(initialForm);
   const [submitted, setSubmitted] = useState(false);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setForm((prev) => ({ ...prev, [name]: value }));
+
+    setForm((prev) => ({
+      ...prev,
+      [name]: value,
+    }));
   };
 
-  const handleSubmit = (e) => {
+  // HANDLE SUBMIT MUST BE HERE
+  const handleSubmit = async (e) => {
+
     e.preventDefault();
-    setSubmitted(true);
-    setForm(initialForm);
-    setTimeout(() => setSubmitted(false), 5000);
+
+    try {
+
+      const response = await fetch("http://localhost:5000/api/contact", {
+        method: "POST",
+
+        headers: {
+          "Content-Type": "application/json",
+        },
+
+        body: JSON.stringify(form),
+      });
+
+      const data = await response.json();
+
+      if (response.ok && data.success) {
+
+        setSubmitted(true);
+
+        setForm(initialForm);
+
+        console.log(data.message);
+
+      } else {
+
+        alert(data.message || "Submission Failed");
+
+      }
+
+    } catch (error) {
+
+      console.error(error);
+
+      alert("Server Error");
+
+    }
+
   };
 
   return (
