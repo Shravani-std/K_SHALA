@@ -6,6 +6,7 @@ import Footer from "./Footer";
 import BackButton from "../components/BackButton";
 import "./Home.css";
 import "./Contact.css";
+const API_URL = import.meta.env.VITE_API_URL || "http://localhost:5000";
 
 const SERVICE_OPTIONS = [
   "Web Development",
@@ -66,18 +67,13 @@ const Contact = () => {
 
   try {
 
-    const response = await fetch(
-      "http://localhost:5000/api/contact",
-      {
-        method: "POST",
-
-        headers: {
-          "Content-Type": "application/json",
-        },
-
-        body: JSON.stringify(form),
-      }
-    );
+    const response = await fetch(`${API_URL}/api/contact`, {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(form),
+        });
 
     const data = await response.json();
 

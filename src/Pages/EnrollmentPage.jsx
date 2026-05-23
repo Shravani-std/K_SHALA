@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import BackButton from "../components/BackButton";
 import "./EnrollmentPage.css";
+const API_URL = import.meta.env.VITE_API_URL || "http://localhost:5000";
 
 const defaultCourseFallback = {
   title: "Enrollment",
@@ -147,21 +148,16 @@ const EnrollmentPage = () => {
 
     try {
 
-    const response = await fetch(
-      "http://localhost:5000/api/enroll",
-      {
-        method: "POST",
+    const response = await fetch(`${API_URL}/api/enroll`, {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify(form),
+          });
 
-        headers: {
-          "Content-Type": "application/json",
-        },
 
-        body: JSON.stringify({
-          ...form,
-          courseTitle,
-        }),
-      }
-    );
+
     const data = await response.json();
     if (data.success){
       setSubmitted(true);
