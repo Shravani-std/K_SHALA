@@ -13,12 +13,17 @@ const validateContact = [
     .withMessage("Valid email required"),
 
   body("phone")
-    .isMobilePhone()
+    .optional()
+    .isMobilePhone("any")
     .withMessage("Valid phone number required"),
+
+  body("service")
+    .notEmpty()
+    .withMessage("Please select a service"),
 
   body("message")
     .trim()
-    .isLength({ min: 10 })
+    // .isLength({ min: 10 })
     .withMessage("Message should be at least 10 characters"),
 
 ];

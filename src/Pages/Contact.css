@@ -308,3 +308,73 @@
     transform: none;
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+.success-theme-btn {
+  display: inline-flex;
+  margin-top: 24px;
+  align-items: center;
+  justify-content: center;
+
+  padding: 14px 34px;
+
+  border-radius: 18px;
+
+  border: 1px solid rgba(255, 140, 0, 0.45);
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(255, 140, 0, 0.18),
+      rgba(255, 140, 0, 0.05)
+    );
+
+  color: #ffcf7a;
+
+  font-weight: 600;
+
+  font-size: 1rem;
+
+  text-decoration: none;
+
+  backdrop-filter: blur(10px);
+
+  box-shadow:
+    0 0 20px rgba(255, 140, 0, 0.12);
+
+  transition:
+    transform 0.25s ease,
+    background 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.success-theme-btn:hover {
+
+  transform: translateY(-2px);
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(255, 140, 0, 0.28),
+      rgba(255, 140, 0, 0.12)
+    );
+
+  box-shadow:
+    0 0 28px rgba(255, 140, 0, 0.25);
+}
+
+.success-theme-btn:active {
+
+  transform: scale(0.98);
+}

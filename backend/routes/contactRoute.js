@@ -8,7 +8,7 @@ const { validationResult } = require("express-validator");
 
 const Contact = require("../db/Contact");
 
-const validateContact = require("../middlewares/contactMiddleware");
+// const validateContact = require("../middlewares/contactMiddleware");
 
 
 // Rate Limiter
@@ -33,7 +33,7 @@ router.post(
 
   contactLimiter,
 
-  validateContact,
+
 
   async (req, res) => {
 
