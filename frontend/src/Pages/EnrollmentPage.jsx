@@ -93,7 +93,8 @@ const EnrollmentPage = () => {
     batchTiming: "",
     heardAbout: "",
     terms: false,
-  });
+    courseTitle: course?.title || "",
+    });
 
   const [submitted, setSubmitted] = useState(false);
 
@@ -102,6 +103,14 @@ const EnrollmentPage = () => {
   }, []);
 
   const courseTitle = course?.title || defaultCourseFallback.title;
+  // useEffect(()=>{
+  //     if(courseTitle){
+  //       setForm((prev) =>({
+  //         ...prev,
+  //         courseTitle: courseTitle,
+  //       }))
+  //     }
+  // }, [courseTitle])
   const courseDescription = course?.description || defaultCourseFallback.description;
   const duration = course?.duration || defaultCourseFallback.duration;
 
@@ -140,10 +149,11 @@ const EnrollmentPage = () => {
     form.passingYear.trim() &&
     form.batchTiming &&
     form.heardAbout.trim() &&
+    courseTitle &&
     form.terms;
-
   const handleSubmit = async (e) =>{
     e.preventDefault();
+    console.log("FORM DATA:", form);
     if(!canSubmit) return;
 
     try {
@@ -482,7 +492,7 @@ const EnrollmentPage = () => {
                     <button
                       className={`submit-btn ${canSubmit ? "submit-btn--active" : ""}`}
                       type="submit"
-                      disabled={false}
+                      disabled={!canSubmit}
                     >
                       <span className="submit-btn-text">Submit Enrollment</span>
                       <span className="submit-btn-arrow" aria-hidden="true">
