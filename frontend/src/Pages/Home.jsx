@@ -18,6 +18,64 @@ import img3 from "./images/class3.webp";
 import img4 from "./images/class4.webp";
 import img5 from "./images/class5.webp";
 
+const itServices = [
+  {
+    title: "Java",
+    subtitle: "Full Stack Development",
+    img: "/javaImg.jpeg",
+    link: "/javafullstacksyllabus",
+  },
+
+  {
+    title: ".NET",
+    subtitle: "Full Stack Development",
+    img: "/dotnetImg.jpg",
+    link: "/dotnetsyllabus",
+  },
+
+  {
+    title: "Python",
+    subtitle: "Full Stack Development",
+    img: "/pythonImg.jpg",
+    link: "/pythonsyllabus",
+  },
+
+  {
+    title: "Oracle DBA",
+    subtitle: "Course Modules",
+    img: "/oracleDbaImg.jpg",
+    link: "/oracledbasyllabus",
+  },
+
+  {
+    title: "Oracle SQL Developer",
+    subtitle: "Course Modules",
+    img: "/oracleSqlImg.jpg",
+    link: "/oraclesqlsyllabus",
+  },
+
+  {
+    title: "Application Support",
+    subtitle: "IT Operations",
+    img: "/download.jpg",
+    link:"/appsupportsyllabus",
+  },
+
+  {
+    title: "Linux Administration",
+    subtitle: "Course Modules",
+    img: "/linuxImg.jpg",
+    link: "/linuxadminsyllabus",
+  },
+
+  {
+    title: "Software Testing",
+    subtitle: "QA & Automation",
+    img: "/testingImg.jpg",
+    link: "/softwaretestingsyllabus",
+  },
+];
+
 import {
   FaCheckCircle,
   FaUserGraduate,
@@ -143,6 +201,7 @@ const classCards = [
 ];
 
 const Home = () => {
+  // const navigate = useNavigate();
   return (
     <div className="homepage">
       <nav className="navbar">
@@ -323,6 +382,48 @@ const Home = () => {
       </div>
 
     </section>
+
+    <section className="classes-section">
+
+  <h2>
+    Explore <span>IT Services</span>
+  </h2>
+
+  <div className="marquee">
+    <div className="marquee-track">
+
+      {[...itServices, ...itServices].map((service, index) => (
+
+        <Link
+          to={service.link}
+          key={index}
+          className="class-card"
+          style={{ textDecoration: "none" }}
+        >
+
+          <img
+            src={service.img}
+            alt={service.title}
+            className="img-card"
+          />
+
+          <div className="class-content">
+            <h3>{service.title}</h3>
+            <p>{service.subtitle}</p>
+          </div>
+
+          <div className="arrow-icon">
+            <FaArrowRight />
+          </div>
+
+        </Link>
+
+      ))}
+
+    </div>
+  </div>
+
+</section>
 
       <section className="download-section">
 
