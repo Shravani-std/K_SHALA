@@ -179,7 +179,7 @@ const EnrollmentPage = () => {
   }
   catch(error){
     console.log(error);
-    alert("Server Error");
+    // alert("Server Error");
   }
 
   }

@@ -15,7 +15,7 @@ const AppSupportSyllabus = () => {
       <div className="top-section">
         <div className="left-java">
           <img
-            src="https://cdn-icons-png.flaticon.com/512/226/226777.png"
+            src="./public/AS-removebg-preview.png"
             alt="AppSupport"/>
           <h2>AppSupport</h2>
         </div>

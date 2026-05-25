@@ -16,7 +16,7 @@ const LinuxAdminSyllabus = () => {
       <div className="top-section">
         <div className="left-java">
           <img
-            src="https://cdn-icons-png.flaticon.com/512/226/226777.png"
+            src="./public/LA-removebg-preview.png"
             alt="LinuxAdmin"/>
           <h2>LinuxAdmin</h2>
         </div>

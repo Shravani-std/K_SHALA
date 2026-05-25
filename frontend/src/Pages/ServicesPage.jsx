@@ -4,6 +4,7 @@ import "./ServicesPage.css";
 import bg2 from "./images/bg2.webp";
 import { Link, useNavigate } from "react-router-dom";
 import BackButton from "../components/BackButton";
+import Footer from "./Footer";
 
 const ServicesPage = () => {
   const navigate = useNavigate();
@@ -484,6 +485,7 @@ const ServicesPage = () => {
           </div>
         </div>
       </section>
+      <Footer/>
     </div>
   );
 };

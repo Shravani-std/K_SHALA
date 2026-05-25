@@ -243,7 +243,12 @@
   text-align: center;
   animation: contactFadeIn 0.4s ease-out;
 }
-
+.error-text {
+  color: #ff4d4f;
+  font-size: 13px;
+  margin-top: 5px;
+  display: block;
+}
 @keyframes contactFadeIn {
   from {
     opacity: 0;

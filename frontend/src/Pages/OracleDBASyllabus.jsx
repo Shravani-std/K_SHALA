@@ -16,7 +16,7 @@ const OracleDBASyllabus = () => {
       <div className="top-section">
         <div className="left-java">
           <img
-            src="https://cdn-icons-png.flaticon.com/512/226/226777.png"
+            src="./public/images-removebg-preview.png"
             alt="OracleDBA"/>
           <h2>OracleDBA</h2>
         </div>

@@ -4,7 +4,7 @@ const router = express.Router();
 
 const rateLimit = require("express-rate-limit");
 
-const { validationResult } = require("express-validator");
+// const { validationResult } = require("express-validator");
 
 const Contact = require("../db/Contact");
 
@@ -16,7 +16,7 @@ const contactLimiter = rateLimit({
 
   windowMs: 15 * 60 * 1000,
 
-  max: 5,
+  max: 100,
 
   message: {
     success: false,
@@ -40,16 +40,16 @@ router.post(
     try {
 
       // Validation Errors
-      const errors = validationResult(req);
+      // const errors = validationResult(req);
 
-      if (!errors.isEmpty()) {
+      // if (!errors.isEmpty()) {
 
-        return res.status(400).json({
-          success: false,
-          errors: errors.array(),
-        });
+      //   return res.status(400).json({
+      //     success: false,
+      //     errors: errors.array(),
+      //   });
 
-      }
+      // }
 
       // Save Contact
       const contact = new Contact({
