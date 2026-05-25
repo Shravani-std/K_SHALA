@@ -15,7 +15,7 @@ const DotNetSyllabus = () => {
       <div className="top-section">
         <div className="left-java">
           <img
-            src="./public/Net-removebg-preview.png"
+            src="https://cdn-icons-png.flaticon.com/512/6132/6132221.png?utm_source=chatgpt.com"
             alt="DotNet"/>
           <h2>DotNet</h2>
         </div>

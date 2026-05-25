@@ -15,7 +15,7 @@ const OracleSQLSyllabus = () => {
       <div className="top-section">
         <div className="left-java">
           <img
-            src="./public/images-removebg-preview.png"
+            src="https://cdn-icons-png.flaticon.com/512/4248/4248443.png?utm_source=chatgpt.com"
             alt="OracleSQL"/>
           <h2>OracleSQL</h2>
         </div>

@@ -15,7 +15,7 @@ const AppSupportSyllabus = () => {
       <div className="top-section">
         <div className="left-java">
           <img
-            src="./public/AS-removebg-preview.png"
+            src="https://cdn-icons-png.flaticon.com/512/1055/1055687.png?utm_source=chatgpt.com"
             alt="AppSupport"/>
           <h2>AppSupport</h2>
         </div>

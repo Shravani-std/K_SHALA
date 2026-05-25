@@ -15,7 +15,7 @@ const SoftwareTestingSyllabus = () => {
       <div className="top-section">
         <div className="left-java">
           <img
-            src="./public/Software_testing-removebg-preview.png"
+            src="https://cdn-icons-png.flaticon.com/512/2881/2881142.png?utm_source=chatgpt.com"
             alt="SoftwareTesting"/>
           <h2>SoftwareTesting</h2>
         </div>
