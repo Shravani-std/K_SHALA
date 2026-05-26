@@ -80,6 +80,7 @@ const ServicesPage = () => {
 
         <div className="hero-right1">
           <img
+            className="student-img"
             src={bg2}
             alt="developer" />
         </div>

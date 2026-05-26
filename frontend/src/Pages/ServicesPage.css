@@ -173,21 +173,48 @@
   color: #cbd5e1;
 }
 
+/* ── Hero Right ── */
 .hero-right1 {
-  width: 50%;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+/* ambient glow ring behind image */
+.hero-right1::before {
+  content: "";
+  position: absolute;
+  width: 480px;
+  height: 480px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255, 140, 0, 0.25), transparent 70%);
+  animation: rotateGlow 15s linear infinite;
+  z-index: 0;
+}
+.student-img {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 32px;
+  object-fit: cover;
   position: relative;
   z-index: 2;
+  animation: floatImage 5s ease-in-out infinite, pulseGlow 4s ease-in-out infinite;
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+  box-shadow:
+    0 25px 70px rgba(255, 140, 0, 0.28),
+    0 0 50px rgba(255, 140, 0, 0.18);
 }
 
-.hero-right1 img {
-  width: 100%;
-  min-height: 100px;
-  display: block;
-  object-fit: cover;
-  border-radius: 20px;
+.student-img:hover {
+  transform: scale(1.03);
+  box-shadow:
+    0 35px 90px rgba(255, 140, 0, 0.38),
+    0 0 70px rgba(255, 180, 0, 0.28);
 }
-
 .courses-section {
+  margin-top: 0px;
   padding: 80px;
   text-align: center;
   background: transparent;
@@ -200,10 +227,11 @@
   padding: 8px 18px;
   border-radius: 20px;
   font-size: 14px;
+  margin-top: 0px;
 }
 
 .courses-section h2 {
-  margin-top: 20px;
+  margin-top: 10px;
   font-size: 45px;
   font-weight: 800;
   margin-bottom: 15px;

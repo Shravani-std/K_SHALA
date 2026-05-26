@@ -11,14 +11,15 @@ import {
   FaEye,
   FaBullseye,
 } from "react-icons/fa";
+
 import logo from "./images/logon.webp";
 import Footer from "./Footer";
 import BackButton from "../components/BackButton";
+
 import "./Home.css";
 import "./About.css";
-import aboutVideo from "./video/K_Shala_Introduction_test_2_with_captions (2).mp4"
 
-
+// import aboutVideo from "./video/K_Shala_Introduction_test_2_with_captions (2).mp4";
 
 const OFFERINGS = [
   {
@@ -97,212 +98,323 @@ const MISSION_POINTS = [
 const About = () => {
   return (
     <div className="homepage about-page">
+
+      {/* NAVBAR */}
       <nav className="navbar">
+
         <Link to="/" className="logo about-logo-link">
+
           <div className="logo-box">
-            <img src={logo} alt="K-Shala logo" className="logo-img" />
+            <img
+              src={logo}
+              alt="K-Shala logo"
+              className="logo-img"
+            />
           </div>
+
           <div>
             <h2>K-Shala</h2>
             <p>Learn Today, Lead Tomorrow</p>
           </div>
+
         </Link>
 
         <ul className="nav-links">
+
           <li>
             <Link to="/">Home</Link>
           </li>
+
           <li>
             <Link to="/servicespage">Services</Link>
           </li>
+
           <li className="active">About</li>
+
           <li>
             <Link to="/contact">Contact</Link>
           </li>
+
         </ul>
+
       </nav>
 
+      {/* MAIN CONTENT */}
       <main className="about-main">
+
         <BackButton />
+
+        {/* HERO SECTION */}
         <section className="about-hero">
-          <h1 className="about-hero-title">About K-Shala</h1>
+
+          <h1 className="about-hero-title">
+            About K-Shala
+          </h1>
+
           <p className="about-hero-subtitle">
             Empowering Students Through Smart Digital Learning
           </p>
-          <div className="about-hero-glow" aria-hidden="true" />
+
+          <div
+            className="about-hero-glow"
+            aria-hidden="true"
+          />
+
         </section>
 
+        {/* INTRO SECTION */}
+        <section className="about-section about-intro-wrapper">
 
+          {/* LEFT SECTION */}
+          <div className="about-left-section">
 
+            <div className="about-glass-card about-intro-card">
 
+              <span className="about-section-tag">
+                About Us
+              </span>
 
+              <h2 className="about-card-title">
+                Welcome to K-Shala
+              </h2>
 
-  <section className="about-section about-intro-wrapper">
+              <p>
+                K-Shala is a modern digital learning platform dedicated to
+                transforming education through smart technology, interactive
+                learning, and student-focused teaching methods.
+              </p>
 
-  {/* LEFT SECTION */}
-  <section className="about-left-section">
-    <div className="about-glass-card about-intro-card">
+              <p>
+                We provide complete learning solutions for students from
+                Class 1st to 12th with NCERT and Maharashtra Board syllabus
+                coverage, helping learners build strong concepts and improve
+                academic performance.
+              </p>
 
-      <span className="about-section-tag">
-        About Us
-      </span>
+            </div>
 
-      <h2 className="about-card-title">
-        Welcome to K-Shala
-      </h2>
+          </div>
 
-      <p>
-        K-Shala is a modern digital learning platform dedicated to
-        transforming education through smart technology, interactive
-        learning, and student-focused teaching methods. Our mission is to
-        make quality education accessible, engaging, and effective for
-        every student across Maharashtra and India.
-      </p>
+          {/* RIGHT VIDEO SECTION */}
+          {/* <div className="about-right-section">
 
-      <p>
-        We provide complete learning solutions for students from Class 1st
-        to 12th with NCERT and Maharashtra Board syllabus coverage,
-        helping learners build strong concepts, improve academic
-        performance, and prepare confidently for future success.
-      </p>
+            <video
+              autoPlay
+              muted
+              loop
+              playsInline
+              controls
+              className="about-side-video"
+            >
+              <source
+                src={aboutVideo}
+                type="video/mp4"
+              />
+            </video>
 
-    </div>
-  </section>
+          </div> */}
 
-  {/* RIGHT SECTION */}
-  <section className="about-right-section">
+        </section>
 
-    <video
-      autoPlay
-      muted
-      loop
-      playsInline
-      controls
-      className="about-side-video"
-    >
-      <source src={aboutVideo} type="video/mp4" />
-    </video>
-
-  </section>
-
-</section>
-
-
-
-
-
-
-
+        {/* VISION & MISSION */}
         <section className="about-section about-vision-mission">
+
           <div className="about-vm-grid">
+
             <article className="about-glass-card about-vm-card">
+
               <div className="about-vm-icon">
                 <FaEye />
               </div>
+
               <h2>Our Vision</h2>
+
               <p>
                 To create a future where every student can learn anytime,
-                anywhere with the power of technology, expert guidance, and
-                personalized education.
+                anywhere with the power of technology and personalized education.
               </p>
+
             </article>
+
             <article className="about-glass-card about-vm-card">
+
               <div className="about-vm-icon">
                 <FaBullseye />
               </div>
+
               <h2>Our Mission</h2>
+
               <ul className="about-mission-list">
+
                 {MISSION_POINTS.map((point) => (
                   <li key={point}>{point}</li>
                 ))}
+
               </ul>
+
             </article>
+
           </div>
+
         </section>
 
+        {/* OFFERINGS */}
         <section className="about-section about-offerings">
-          <h2 className="about-section-heading">What We Offer</h2>
+
+          <h2 className="about-section-heading">
+            What We Offer
+          </h2>
+
           <div className="about-offerings-grid">
+
             {OFFERINGS.map((item) => {
               const Icon = item.icon;
+
               return (
-                <article key={item.title} className="about-glass-card about-offer-card">
+                <article
+                  key={item.title}
+                  className="about-glass-card about-offer-card"
+                >
+
                   <div className="about-offer-icon">
                     <Icon />
                   </div>
+
                   <h3>{item.title}</h3>
+
                   <p>{item.description}</p>
+
                 </article>
               );
             })}
+
           </div>
+
         </section>
 
+        {/* WHY CHOOSE */}
         <section className="about-section about-why">
-          <h2 className="about-section-heading">Why Students Choose K-Shala</h2>
+
+          <h2 className="about-section-heading">
+            Why Students Choose K-Shala
+          </h2>
+
           <div className="about-why-grid">
+
             {WHY_CHOOSE.map((item) => (
-              <div key={item} className="about-why-card">
+
+              <div
+                key={item}
+                className="about-why-card"
+              >
+
                 <FaCheckCircle className="about-why-check" />
+
                 <span>{item}</span>
+
               </div>
+
             ))}
+
           </div>
+
         </section>
 
+        {/* LEARNING APPROACH */}
         <section className="about-section about-approach">
+
           <div className="about-glass-card about-approach-card">
+
             <h2 className="about-section-heading about-approach-heading">
               Our Learning Approach
             </h2>
+
             <p className="about-approach-lead">
               At K-Shala, we believe learning should be:
             </p>
+
             <div className="about-values-row">
+
               {LEARNING_VALUES.map((value) => (
-                <span key={value} className="about-value-pill">
+
+                <span
+                  key={value}
+                  className="about-value-pill"
+                >
                   {value}
                 </span>
+
               ))}
+
             </div>
+
             <p className="about-approach-text">
-              Our platform combines technology, analytics, and expert teaching to
-              help students learn smarter and achieve better results.
+              Our platform combines technology, analytics, and expert teaching
+              to help students learn smarter and achieve better results.
             </p>
+
           </div>
+
         </section>
 
+        {/* AUDIENCE */}
         <section className="about-section about-audience">
-          <h2 className="about-section-heading">Who We Serve</h2>
+
+          <h2 className="about-section-heading">
+            Who We Serve
+          </h2>
+
           <div className="about-audience-grid">
+
             {AUDIENCE.map((item) => (
-              <div key={item} className="about-audience-card">
+
+              <div
+                key={item}
+                className="about-audience-card"
+              >
                 {item}
               </div>
+
             ))}
+
           </div>
+
         </section>
 
+        {/* CTA */}
         <section className="about-section about-cta">
+
           <div className="about-glass-card about-cta-card">
-            <h2>Join the K-Shala Learning Community</h2>
+
+            <h2>
+              Join the K-Shala Learning Community
+            </h2>
+
             <p>
-              Thousands of students trust K-Shala for quality education, smart
-              preparation, and continuous growth. We are committed to empowering
-              every learner with the tools and confidence needed to succeed in
-              academics and beyond.
+              Thousands of students trust K-Shala for quality education,
+              smart preparation, and continuous growth.
             </p>
+
             <blockquote className="about-quote">
-              &ldquo;Learn Smart. Grow Faster. Achieve More with K-Shala.&rdquo;
+              “Learn Smart. Grow Faster. Achieve More with K-Shala.”
             </blockquote>
-            <Link to="/contact" className="about-cta-btn">
+
+            <Link
+              to="/contact"
+              className="about-cta-btn"
+            >
               Get Started
             </Link>
+
           </div>
+
         </section>
+
       </main>
 
+      {/* FOOTER */}
       <Footer />
+
     </div>
   );
 };
