@@ -1,7 +1,10 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { FaEnvelope, FaPhone, FaMapMarkerAlt } from "react-icons/fa";
-import logo from "./images/logon.webp";
+import {
+  FaEnvelope,
+  FaPhoneAlt,
+  FaMapMarkerAlt,
+} from "react-icons/fa";import logo from "./images/logon.webp";
 import Footer from "./Footer";
 import BackButton from "../components/BackButton";
 import "./Home.css";
@@ -27,7 +30,7 @@ const CONTACT_CARDS = [
     href: "mailto:contact@kshetrapati.info",
   },
   {
-    icon: FaPhone,
+    icon: FaPhoneAlt,
     label: "Phone",
     value: "+91 7972657424",
     href: "tel:+917972657424",
