@@ -12,25 +12,24 @@
   --nav-glass: rgba(5, 8, 22, 0.72);
 }
 
+/* ===== GLOBAL OVERFLOW FIX ===== */
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Safe responsive defaults: prevent production-only browser scaling issues */
-html {
+html,
+body,
+#root {
   width: 100%;
+  max-width: 100%;
   overflow-x: hidden;
-  -webkit-text-size-adjust: 100%;
-  text-size-adjust: 100%;
 }
 
 body {
-  width: 100%;
-  margin: 0;
-  overflow-x: hidden;
-  max-width: 100%;
+  position: relative;
 }
 
 html, body {

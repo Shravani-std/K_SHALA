@@ -105,12 +105,14 @@ function App() {
           <Routes>
 
             {/* ================= HOME ================= */}
+
             <Route
               path="/"
               element={<Home />}
             />
 
             {/* ================= SERVICES ================= */}
+
             <Route
               path="/servicespage"
               element={<ServicesPage />}
@@ -158,7 +160,7 @@ function App() {
               element={<PythonSyllabus />}
             />
 
-            {/* ================= OTHER PAGES ================= */}
+            {/* ================= LEGAL PAGES ================= */}
 
             <Route
               path="/privacy-policy"
@@ -169,6 +171,8 @@ function App() {
               path="/terms-and-conditions"
               element={<TermsConditions />}
             />
+
+            {/* ================= OTHER PAGES ================= */}
 
             <Route
               path="/support"
