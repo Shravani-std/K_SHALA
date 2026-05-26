@@ -296,7 +296,7 @@ body {
   width: 100%;
   min-height: 100vh;
   overflow-x: hidden;
-  overflow-y: visible !important;
+  overflow-y: auto;
   position: relative;
 }
 
@@ -308,32 +308,83 @@ body {
   box-sizing: border-box;
   overflow: visible !important;
 }
+/* =========================
+   MOBILE FIX
+========================= */
 
 @media (max-width: 768px) {
 
+  html,
+  body {
+    width: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    margin: 0;
+    padding: 0;
+  }
+
   .legal-page {
-    min-height: auto;
-    height: auto;
-    overflow-y: visible !important;
+    width: 100%;
+    min-height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .legal-nav {
+    width: 100%;
+    padding: 16px;
+    box-sizing: border-box;
   }
 
   .legal-main {
     width: 100%;
-    padding: 20px 16px 80px;
-    overflow: visible !important;
+    max-width: 100%;
+    padding: 20px 16px 60px;
+    box-sizing: border-box;
+    overflow: visible;
+  }
+
+  .legal-main h1 {
+    font-size: 28px;
+    line-height: 1.4;
+  }
+
+  .legal-intro {
+    font-size: 15px;
+    line-height: 1.7;
+    margin-bottom: 24px;
   }
 
   .legal-section {
-    display: block !important;
-    visibility: visible !important;
-    opacity: 1 !important;
+    width: 100%;
+    display: block;
+    padding: 18px 16px;
+    margin-bottom: 24px;
+    border-radius: 16px;
+    box-sizing: border-box;
+  }
+
+  .legal-section h2 {
+    font-size: 19px;
+    line-height: 1.5;
+  }
+
+  .legal-section h3 {
+    font-size: 17px;
+    line-height: 1.5;
   }
 
   .legal-section p,
-  .legal-section li,
-  .legal-section h2,
-  .legal-section h3 {
-    visibility: visible !important;
-    opacity: 1 !important;
+  .legal-section ul li,
+  .legal-section ol li {
+    font-size: 15px;
+    line-height: 1.8;
+    word-break: break-word;
+  }
+
+  .legal-contact a {
+    word-break: break-word;
   }
 }
