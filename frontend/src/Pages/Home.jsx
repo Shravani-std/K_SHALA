@@ -1,7 +1,6 @@
 import "./Home.css";
 import { Link } from "react-router-dom";
 import Footer from "./Footer";
-import React, { useRef } from "react";
 import {
   FaArrowRight,
   FaCheckCircle,
@@ -10,7 +9,8 @@ import {
   FaStar,
   FaQuestionCircle,
 } from "react-icons/fa";
-
+import { FaBars, FaTimes } from "react-icons/fa";
+import React, { useRef, useState } from "react";
 import herobg from "./images/Herobg.webp";
 import logo from "./images/logon.webp";
 import applink from "./images/applink.webp";
@@ -154,50 +154,59 @@ const classCards = [
 
 const Home = () => {
   const videoSectionRef = useRef(null);
+  const [menuOpen, setMenuOpen] = useState(false);
   return (
     <div className="homepage">
 
       {/* NAVBAR */}
-      <nav className="navbar">
+      {/* NAVBAR */}
+<nav className="navbar">
 
-        <div className="logo">
+  <div className="logo">
 
-          <div className="logo-box">
-            <img
-              src={logo}
-              alt="K-Shala logo"
-              className="logo-img"
-            />
-          </div>
+    <div className="logo-box">
+      <img
+        src={logo}
+        alt="K-Shala logo"
+        className="logo-img"
+      />
+    </div>
 
-          <div>
-            <h2>K-Shala</h2>
-            <p>Learn Today, Lead Tomorrow</p>
-          </div>
+    <div>
+      <h2>K-Shala</h2>
+      <p>Learn Today, Lead Tomorrow</p>
+    </div>
 
-        </div>
+  </div>
 
-        <ul className="nav-links">
+  {/* Burger Icon */}
+  <div
+    className="menu-icon"
+    onClick={() => setMenuOpen(!menuOpen)}
+  >
+    {menuOpen ? <FaTimes /> : <FaBars />}
+  </div>
 
-          <li className="active">Home</li>
+  {/* Nav Links */}
+  <ul className={menuOpen ? "nav-links active-menu" : "nav-links"}>
 
-          <li>
-            <Link to="/servicespage">Services</Link>
-          </li>
+    <li className="active">Home</li>
 
-          <li>
-            <Link to="/about">About</Link>
-          </li>
+    <li onClick={() => setMenuOpen(false)}>
+      <Link to="/servicespage">Services</Link>
+    </li>
 
-          <li>
-            <Link to="/contact">Contact</Link>
-          </li>
+    <li onClick={() => setMenuOpen(false)}>
+      <Link to="/about">About</Link>
+    </li>
 
-        </ul>
+    <li onClick={() => setMenuOpen(false)}>
+      <Link to="/contact">Contact</Link>
+    </li>
 
-       
+  </ul>
 
-      </nav>
+</nav>
 
       {/* HERO SECTION */}
       <section className="hero-section">
