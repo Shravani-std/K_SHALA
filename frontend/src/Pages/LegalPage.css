@@ -275,3 +275,65 @@
     margin-bottom: 20px;
   }
 }
+
+
+/* ===== FINAL MOBILE FIX ===== */
+
+html,
+body {
+  overflow-x: hidden;
+  overflow-y: auto;
+  height: auto;
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.legal-page {
+  width: 100%;
+  min-height: 100vh;
+  overflow-x: hidden;
+  overflow-y: visible !important;
+  position: relative;
+}
+
+.legal-main {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px 40px 80px;
+  box-sizing: border-box;
+  overflow: visible !important;
+}
+
+@media (max-width: 768px) {
+
+  .legal-page {
+    min-height: auto;
+    height: auto;
+    overflow-y: visible !important;
+  }
+
+  .legal-main {
+    width: 100%;
+    padding: 20px 16px 80px;
+    overflow: visible !important;
+  }
+
+  .legal-section {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+  }
+
+  .legal-section p,
+  .legal-section li,
+  .legal-section h2,
+  .legal-section h3 {
+    visibility: visible !important;
+    opacity: 1 !important;
+  }
+}
