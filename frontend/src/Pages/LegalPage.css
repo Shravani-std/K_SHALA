@@ -230,3 +230,48 @@
     animation: none;
   }
 }
+
+/* Mobile Fix for Privacy Policy Page */
+
+@media (max-width: 768px) {
+
+  .legal-page,
+  .legal-layout,
+  .legal-container {
+    width: 100%;
+    min-height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+
+  .legal-content {
+    width: 100%;
+    max-width: 100%;
+    padding: 0;
+  }
+
+  .legal-section {
+    width: 100%;
+    margin-bottom: 24px;
+  }
+
+  .legal-section h2 {
+    font-size: 20px;
+    line-height: 1.4;
+  }
+
+  .legal-section p,
+  .legal-section li {
+    font-size: 15px;
+    line-height: 1.7;
+    word-break: break-word;
+  }
+
+  .legal-back-btn {
+    position: relative;
+    z-index: 10;
+    margin-bottom: 20px;
+  }
+}
