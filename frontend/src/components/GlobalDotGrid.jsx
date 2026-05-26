@@ -15,7 +15,8 @@ const GlobalDotGrid = () => {
         position: "fixed",
         inset: 0,
         background: "linear-gradient(to bottom, #021526, #03346E)",
-        zIndex: 1,
+        zIndex: -1,
+        pointerEvents: "none",
       }}
     />
   );

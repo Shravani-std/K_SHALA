@@ -1,0 +1,57 @@
+
+> kshalaweb@0.1.0 build
+> vite build
+
+[36mvite v8.0.13 [32mbuilding client environment for production...[36m[39m
+[2Ktransforming...✓ 1622 modules transformed.
+rendering chunks...
+computing gzip size...
+build/index.html                                                              0.60 kB │ gzip:  0.36 kB
+build/assets/Certificate-CqpSwUIS.webp                                        4.19 kB
+build/assets/class3-DmiWLOpI.webp                                             4.53 kB
+build/assets/class1-uCrxksHJ.webp                                             4.87 kB
+build/assets/leftBuilding-dYnko-f5.webp                                       6.68 kB
+build/assets/applink-2YmJQAyd.webp                                           16.00 kB
+build/assets/logon--4nggl40.webp                                             39.04 kB
+build/assets/laptopcode-DAuT7L4h.webp                                        58.59 kB
+build/assets/bg2-CGTdpAjQ.webp                                              133.73 kB
+build/assets/Herobg-ZOVIwF7P.webp                                           157.65 kB
+build/assets/K_Shala_Introduction_test_2_with_captions (2)-BaZhc7lP.mp4  48,646.38 kB
+build/assets/BackButton-DduYlbEk.css                                          1.32 kB │ gzip:  0.57 kB
+build/assets/LegalPageLayout-ZI9_iOQB.css                                     3.95 kB │ gzip:  1.23 kB
+build/assets/ServicesPage-Cs8vDbcJ.css                                        5.20 kB │ gzip:  1.73 kB
+build/assets/Contact-CbgX9qod.css                                             5.29 kB │ gzip:  1.63 kB
+build/assets/AppSupportSyllabus-Be_LJxm1.css                                  6.29 kB │ gzip:  1.96 kB
+build/assets/About-7abISw6t.css                                               8.98 kB │ gzip:  2.24 kB
+build/assets/EnrollmentPage-4vsk0oE0.css                                     12.05 kB │ gzip:  3.17 kB
+build/assets/Footer-2KMIVvKX.css                                             17.81 kB │ gzip:  4.37 kB
+build/assets/logon-DEUE4t0d.js                                                0.05 kB │ gzip:  0.07 kB
+build/assets/laptopcode-D8nI42__.js                                           0.14 kB │ gzip:  0.13 kB
+build/assets/BackButton-I5xDKLKZ.js                                           0.46 kB │ gzip:  0.30 kB
+build/assets/rolldown-runtime-CVuCju2K.js                                     0.56 kB │ gzip:  0.36 kB
+build/assets/Footer-D3yNfS7l.js                                               0.64 kB │ gzip:  0.37 kB
+build/assets/ss-DBJGQQkC.js                                                   0.85 kB │ gzip:  0.70 kB
+build/assets/LegalPageLayout-CgzB4ISv.js                                      0.86 kB │ gzip:  0.41 kB
+build/assets/pl-bDHJTzSc.js                                                   0.94 kB │ gzip:  0.76 kB
+build/assets/sql-sdMsrHrj.js                                                  1.02 kB │ gzip:  0.83 kB
+build/assets/adj-LUUba5Y7.js                                                  1.10 kB │ gzip:  0.88 kB
+build/assets/Support-B1QUH0cN.js                                              3.42 kB │ gzip:  0.99 kB
+build/assets/PrivacyPolicy-C5oI0z5E.js                                        4.53 kB │ gzip:  1.38 kB
+build/assets/Contact-CADtQD9J.js                                              6.23 kB │ gzip:  2.09 kB
+build/assets/About-MTHE9as1.js                                                7.04 kB │ gzip:  2.25 kB
+build/assets/TermsConditions-gJtqWCae.js                                      7.07 kB │ gzip:  2.38 kB
+build/assets/DotNetSyllabus-DyujNc7J.js                                       7.41 kB │ gzip:  1.67 kB
+build/assets/PythonSyllabus-cfaI4zS3.js                                       9.36 kB │ gzip:  1.87 kB
+build/assets/index-Bm3LEavV.js                                               10.01 kB │ gzip:  3.97 kB
+build/assets/SoftwareTestingSyllabus-DK5ryOJM.js                             10.55 kB │ gzip:  1.93 kB
+build/assets/OracleSQLSyllabus-gznyf7fo.js                                   11.63 kB │ gzip:  1.88 kB
+build/assets/EnrollmentPage-CXgy6qwW.js                                      12.02 kB │ gzip:  3.32 kB
+build/assets/ServicesPage-D5eDR0CI.js                                        12.18 kB │ gzip:  1.96 kB
+build/assets/AppSupportSyllabus-Dui8Bbn2.js                                  12.33 kB │ gzip:  2.10 kB
+build/assets/LinuxAdminSyllabus-x6s0t2UD.js                                  12.55 kB │ gzip:  2.06 kB
+build/assets/OracleDBASyllabus-DKQOzXGH.js                                   12.98 kB │ gzip:  2.12 kB
+build/assets/JavaFullStackSyllabus-T6i2sDX7.js                               15.36 kB │ gzip:  7.35 kB
+build/assets/Home-DRmCf4Qi.js                                                33.42 kB │ gzip: 20.46 kB
+build/assets/vendor-CMNUEus0.js                                             177.89 kB │ gzip: 59.64 kB
+
+[32m✓ built in 4.03s[39m

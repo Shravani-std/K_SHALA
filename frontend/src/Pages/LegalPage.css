@@ -193,13 +193,19 @@
   color: #ff9f1c;
 }
 
+@media (max-width: 1200px) {
+  .legal-nav {
+    padding: 20px 40px;
+  }
+}
+
 @media (max-width: 768px) {
   .legal-nav {
-    padding: 16px 24px;
+    padding: 16px 20px;
   }
 
   .legal-main {
-    padding: 16px 24px 48px;
+    padding: 16px 20px 48px;
   }
 
   .legal-main h1 {
@@ -211,7 +217,7 @@
   }
 
   .legal-section {
-    padding: 20px 22px;
+    padding: 20px 16px;
   }
 
   .legal-section h2 {
@@ -298,6 +304,9 @@ body {
   overflow-x: hidden;
   overflow-y: auto;
   position: relative;
+  display: flex;
+  flex-direction: column;
+  color: #ffffff;
 }
 
 .legal-main {
