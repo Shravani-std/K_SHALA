@@ -232,9 +232,9 @@ const Home = () => {
 
           <div className="hero-buttons">
 
-            <button className="primary-btn">
-              Get Started <FaArrowRight />
-            </button>
+         <Link to="/contact" className="primary-btn">
+  Get Started <FaArrowRight />
+</Link>
 
           <button
             className="secondary-btn"
@@ -391,9 +391,9 @@ const Home = () => {
                 <p>{card.subtitle}</p>
               </div>
 
-              <div className={card.arrowClass}>
+              {/* <div className={card.arrowClass}>
                 <FaArrowRight />
-              </div>
+              </div> */}
             </div>
           ))}
         </div>
@@ -408,7 +408,7 @@ const Home = () => {
   </h2>
 
   <div className="marquee">
-    <div className="marquee-track">
+    <div className="marquee-track it-services-track">
 
       {[...itServices, ...itServices].map((service, index) => (
 

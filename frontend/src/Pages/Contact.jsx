@@ -26,19 +26,19 @@ const CONTACT_CARDS = [
   {
     icon: FaEnvelope,
     label: "Email",
-    value: "contact@kshetrapati.info",
-    href: "mailto:contact@kshetrapati.info",
+    value: "contact@k-shala.com",
+    href: "mailto:contact@k-shala.com",
   },
   {
     icon: FaPhoneAlt,
     label: "Phone",
-    value: "+91 7972657424",
-    href: "tel:+917972657424",
+    value: "+91 8424067972",
+    href: "tel:+918424067972",
   },
   {
     icon: FaMapMarkerAlt,
     label: "Location",
-    value: "C-103 Ajmera Exotica, Wagholi, Pune.",
+    value: "102 VBC Wagholi Pune 412207",
     href: null,
   },
 ];

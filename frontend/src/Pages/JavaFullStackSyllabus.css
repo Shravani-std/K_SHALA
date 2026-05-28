@@ -383,3 +383,71 @@ body{
 .Real-World-Projects{ max-width: 360px; }
 .Pre-Placement-Activities{ max-width: 440px; }
 
+
+
+
+
+
+
+
+.top-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  padding: 40px 60px;
+  flex-wrap: wrap;
+}
+
+.center-title {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.course-video {
+  width: 100%;
+  margin-top: 25px;
+  display: flex;
+  justify-content: center;
+}
+
+.course-video video {
+  width: 100%;
+  max-width: 850px;
+  border-radius: 20px;
+  object-fit: contain;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.35);
+}
+
+/* LEFT IMAGE */
+.left-java {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* RIGHT IMAGE */
+.right-image img {
+  width: 280px;
+  max-width: 100%;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .top-section {
+    flex-direction: column;
+    padding: 20px;
+    gap: 25px;
+  }
+
+  .course-video video {
+    width: 100%;
+  }
+
+  .right-image img {
+    width: 220px;
+  }
+}

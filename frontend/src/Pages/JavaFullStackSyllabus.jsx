@@ -17,7 +17,7 @@ import React from "react";
 
 import "./JavaFullStackSyllabus.css";
 import BackButton from "../components/BackButton";
-
+import video from "./video/K_Shala_Java_Program_with_captions.mp4";
 
 const JavaFullStackSyllabus = () => {
   return (
@@ -50,6 +50,24 @@ const JavaFullStackSyllabus = () => {
             alt="Coding"/>
 
         </div>
+
+         {/* VIDEO */}
+  <div className="course-video">
+    <video
+      autoPlay
+      muted
+      loop
+      controls
+      playsInline
+    >
+      <source
+        src={video}
+        type="video/mp4"
+      />
+      Your browser does not support the video tag.
+    </video>
+  </div>
+
 
       </div>
 
