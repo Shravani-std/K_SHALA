@@ -370,6 +370,7 @@ const EnrollmentPage = () => {
                           { value: "12th", label: "12th" },
                           { value: "Diploma", label: "Diploma" },
                           { value: "Undergraduate", label: "Undergraduate" },
+                          { value: "Graduate", label: "Graduate" },
                           { value: "Postgraduate", label: "Postgraduate" },
                           { value: "PhD", label: "PhD" },
                           { value: "Other", label: "Other" },
