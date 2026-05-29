@@ -7,7 +7,7 @@ import React from "react";
 
 import "./DotNetSyllabus.css";
 import BackButton from "../components/BackButton";
-
+import video from "./video/DotNet.mp4";
 const DotNetSyllabus = () => {
   return (
     <div className="syllabus-container">
@@ -23,9 +23,27 @@ const DotNetSyllabus = () => {
           <h1>DotNet <span>Full Stack Syllabus</span></h1>
           <p>Master C#, ASP.NET Core, MVC, Web API, Entity Framework and modern web applications.</p>
         </div>
-        <div className="right-image">
-            <img src={laptopcode} alt="Coding"/>
-        </div>
+
+
+          {/* VIDEO */}
+          <div className="course-video">
+            <video
+              autoPlay
+              muted
+              loop
+              controls
+              playsInline
+            >
+              <source
+                src={video}
+                type="video/mp4"
+              />
+              Your browser does not support the video tag.
+            </video>
+          </div>
+
+
+          
       </div>
 
 
@@ -120,19 +138,25 @@ const DotNetSyllabus = () => {
         </div>
       </div>
 
+
+
+
       <div className="internship-wrapper">
       <div className="module-badge">MODULE - 5 to MODULE - 7</div>
-      <img src={leftbulding} alt="building" className="left-building" />
-      <div className="internship-content">
+      {/* <img src={leftbulding} alt="building" className="left-building" /> */}
+   <div className="internship-section">
         <div className="icon-circle">💼</div>
+      <div className="internship-content">
         <h1>Onsite Internship</h1>
         <ul>
 <li>Hands-on real-time company internship with live projects</li><li>teamwork, deployment, client communication and practical exposure.</li>
         </ul>
       </div>
-      <img src={Certificate} alt="certificate" className="right-certificate" /> 
+      {/* <img src={Certificate} alt="certificate" className="right-certificate" />  */}
     </div>
       
+</div>
+
     </div>
   );
 };

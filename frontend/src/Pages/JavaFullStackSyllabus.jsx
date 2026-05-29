@@ -23,6 +23,7 @@ const JavaFullStackSyllabus = () => {
   return (
     <div className="syllabus-container">
       <BackButton />
+      
       <div className="top-section">
         <div className="left-java">
           <img
@@ -44,14 +45,7 @@ const JavaFullStackSyllabus = () => {
 
         </div>
 
-        <div className="right-image">
-            <img
-            src={laptopcode}
-            alt="Coding"/>
-
-        </div>
-
-         {/* VIDEO */}
+                {/* VIDEO */}
   <div className="course-video">
     <video
       autoPlay
@@ -69,7 +63,12 @@ const JavaFullStackSyllabus = () => {
   </div>
 
 
+ 
+
       </div>
+
+
+
 
       <div className="module-wrapper">
 
@@ -293,31 +292,39 @@ const JavaFullStackSyllabus = () => {
           </div>
         </div>
       </div>
-      <div className="internship-wrapper">
 
+
+
+
+
+      <div className="internship-wrapper">
       <div className="module-badge">
         MODULE - 5 to MODULE - 7
       </div>
-
-      <img src={leftbulding} alt="building" className="left-building" />
- 
-      <div className="internship-content">
-        <div className="icon-circle">
-          💼
-        </div>
-
-        <h1>Onsite Internship</h1>
-
-        <p>
-          Hands-on real-time company internship with live projects,
-          teamwork, deployment, client communication and practical exposure.
-        </p>
-
-      </div>
-
-      <img src={Certificate} alt="certificate" className="right-certificate" /> 
+      {/* <img src={leftbulding} alt="building" className="left-building" /> */}
+   <div className="internship-section">
+  <div className="icon-circle">
+    💼
+  </div>
+  <div className="internship-content">
+    <h1>Onsite Internship</h1>
+    <p>
+      Gain hands-on industry experience through real-time company internships,
+      live projects, teamwork, deployment practices, client communication,
+      and practical exposure to professional workflows.
+    </p>
+  </div>
+</div>
+      {/* <img src={Certificate} alt="certificate" className="right-certificate" />  */}
     </div>
       
+
+
+
+
+
+
+
     </div>
   );
 };

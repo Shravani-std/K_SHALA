@@ -7,7 +7,7 @@ import React from "react";
 
 import "./OracleSQLSyllabus.css";
 import BackButton from "../components/BackButton";
-
+import video from "./video/K Shala SQL Developer Program _1080p_caption.mp4";
 const OracleSQLSyllabus = () => {
   return (
     <div className="syllabus-container">
@@ -23,9 +23,27 @@ const OracleSQLSyllabus = () => {
           <h1>Oracle <span>SQL Developer Course Modules</span></h1>
           <p>Learn to design, create, and manage relational databases using advanced SQL queries and PL/SQL programming.</p>
         </div>
-        <div className="right-image">
-            <img src={laptopcode} alt="Coding"/>
-        </div>
+
+
+           {/* VIDEO */}
+          <div className="course-video">
+            <video
+              autoPlay
+              muted
+              loop
+              controls
+              playsInline
+            >
+              <source
+                src={video}
+                type="video/mp4"
+              />
+              Your browser does not support the video tag.
+            </video>
+          </div>
+
+
+
       </div>
 
 
@@ -197,7 +215,7 @@ const OracleSQLSyllabus = () => {
 
       <div className="internship-wrapper">
       <div className="module-badge">MODULE - 6 to MODULE - 7</div>
-      <img src={leftbulding} alt="building" className="left-building" />
+      {/* <img src={leftbulding} alt="building" className="left-building" /> */}
       <div className="internship-content">
         <div className="icon-circle">💼</div>
         <h1>Internship & Live Projects</h1>
@@ -205,7 +223,7 @@ const OracleSQLSyllabus = () => {
 <li>Live SQL Development</li><li>Real-Time Database Queries</li><li>Database Troubleshooting</li><li>Report Generation</li><li>Team Collaboration</li><li>Client Communication</li><li>Internship Certification</li>
         </ul>
       </div>
-      <img src={Certificate} alt="certificate" className="right-certificate" /> 
+      {/* <img src={Certificate} alt="certificate" className="right-certificate" />  */}
     </div>
       
     </div>

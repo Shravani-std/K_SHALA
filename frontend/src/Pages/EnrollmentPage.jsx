@@ -158,30 +158,28 @@ const EnrollmentPage = () => {
 
     try {
 
-    const response = await fetch(`${API_URL}/api/enroll`, {
-            method: "POST",
-            headers: {
-              "Content-Type": "application/json",
-            },
-            body: JSON.stringify(form),
-          });
+      const response = await fetch(`${API_URL}/api/enroll`, {
+  method: "POST",
+  headers: {
+    "Content-Type": "application/json",
+  },
+  body: JSON.stringify(form),
+});
 
-
-
-    const data = await response.json();
-    if (data.success){
-      setSubmitted(true);
-      console.log(data.message)
-    }
-    else{
-      alert("Submission Failed");
-    }
+const data = await response.json();
+console.log("Status:", response.status);
+console.log("Response:", data);
+if (response.ok && data.success) {
+  setSubmitted(true);
+  // alert(data.message);
+} else {
+  alert(data.message || "Submission Failed");
+}
   }
   catch(error){
-    console.log(error);
-    // alert("Server Error");
-  }
-
+  console.error(error);
+  alert("Server Error. Please try again.");
+}
   }
 
 

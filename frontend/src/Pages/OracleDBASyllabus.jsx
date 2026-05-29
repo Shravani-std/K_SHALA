@@ -8,6 +8,7 @@ import React from "react";
 
 import "./OracleDBASyllabus.css";
 import BackButton from "../components/BackButton";
+import video from "./video/K Shala Oracle DBA Program _1080p_caption.mp4";
 
 const OracleDBASyllabus = () => {
   return (
@@ -24,9 +25,26 @@ const OracleDBASyllabus = () => {
           <h1>Oracle <span>DBA Course Modules</span></h1>
           <p>Master database architecture, administration, backup, recovery, and performance tuning with Oracle Database.</p>
         </div>
-        <div className="right-image">
-            <img src={laptopcode} alt="Coding"/>
-        </div>
+
+
+           {/* VIDEO */}
+          <div className="course-video">
+            <video
+              autoPlay
+              muted
+              loop
+              controls
+              playsInline
+            >
+              <source
+                src={video}
+                type="video/mp4"
+              />
+              Your browser does not support the video tag.
+            </video>
+          </div>
+
+          
       </div>
 
       <div className="module-wrapper">
@@ -201,7 +219,7 @@ const OracleDBASyllabus = () => {
 
       <div className="internship-wrapper">
       <div className="module-badge">MODULE - 6 to MODULE - 7</div>
-      <img src={leftbulding} alt="building" className="left-building" />
+      {/* <img src={leftbulding} alt="building" className="left-building" /> */}
       <div className="internship-content">
         <div className="icon-circle">💼</div>
         <h1>Onsite Internship & Real-Time Training</h1>
@@ -209,7 +227,7 @@ const OracleDBASyllabus = () => {
           <li>Live Database Administration</li><li>Backup & Recovery Practice</li><li>Performance Monitoring</li><li>Real-Time Issue Handling</li><li>Client Communication</li><li>Documentation Practice</li><li>Internship Certification</li>
         </ul>
       </div>
-      <img src={Certificate} alt="certificate" className="right-certificate" /> 
+      {/* <img src={Certificate} alt="certificate" className="right-certificate" />  */}
     </div>
       
     </div>

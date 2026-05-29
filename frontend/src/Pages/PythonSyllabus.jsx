@@ -7,7 +7,7 @@ import React from "react";
 
 import "./PythonSyllabus.css";
 import BackButton from "../components/BackButton";
-
+import video from "./video/python.mp4";
 const PythonSyllabus = () => {
   return (
     <div className="syllabus-container">
@@ -23,9 +23,26 @@ const PythonSyllabus = () => {
           <h1>Python <span>Syllabus</span></h1>
           <p>Learn Python programming, Django, Flask, Data Science and ML with real-world projects.</p>
         </div>
-        <div className="right-image">
-            <img src={laptopcode} alt="Coding"/>
-        </div>
+
+
+           {/* VIDEO */}
+          <div className="course-video">
+            <video
+              autoPlay
+              muted
+              loop
+              controls
+              playsInline
+            >
+              <source
+                src={video}
+                type="video/mp4"
+              />
+              Your browser does not support the video tag.
+            </video>
+          </div>
+
+
       </div>
 
 
@@ -148,20 +165,44 @@ const PythonSyllabus = () => {
         </div>
       </div>
 
+
+
+
+
       <div className="internship-wrapper">
-      <div className="module-badge">MODULE - 5 to MODULE - 7</div>
-      <img src={leftbulding} alt="building" className="left-building" />
-      <div className="internship-content">
-        <div className="icon-circle">💼</div>
-        <h1>Onsite Internship</h1>
-        <ul>
-<li>Hands-on real-time company internship with live projects</li><li>teamwork, deployment, client communication and practical exposure.</li>
-        </ul>
-      </div>
-      <img src={Certificate} alt="certificate" className="right-certificate" /> 
+
+  <div className="module-badge">
+    MODULE - 5 to MODULE - 7
+  </div>
+
+  {/* <img src={leftbulding} alt="building" className="left-building" /> */}
+
+  <div className="internship-section">
+
+    <div className="icon-circle">
+      💼
     </div>
+
+    <div className="internship-content">
+
+      <h1>Onsite Internship</h1>
+
+      <ul>
+        <li>Hands-on real-time company internship with live projects</li>
+        <li>Teamwork, deployment, client communication, and practical industry exposure</li>
+      </ul>
+
+    </div>
+
+  </div>
+
+  {/* <img src={Certificate} alt="certificate" className="right-certificate" /> */}
+
+</div>
       
     </div>
+
+
   );
 };
 

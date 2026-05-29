@@ -57,30 +57,6 @@ body{
   z-index:1;
 }
 
-.top-section{
-  display:grid;
-  grid-template-columns: 180px 1fr 320px;
-  align-items:center;
-  gap:26px;
-  margin-bottom:34px;
-}
-
-.left-java{
-  text-align:center;
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  justify-content:center;
-  gap:8px;
-}
-
-.left-java img{
-  width:96px;
-  height:96px;
-  object-fit:contain;
-  filter: drop-shadow(0 0 18px rgba(0,207,255,0.25));
-}
-
 /* Ensure all module rows have consistent spacing & avoid odd gaps */
 .module-wrapper{
   max-width: 1200px;
@@ -92,42 +68,269 @@ body{
 .cards-row .card{ min-width: 0; }
 
 
-.left-java h2{
-  color: #00cfff;
-  font-size:28px;
-  font-weight:900;
-  letter-spacing:0.3px;
-  text-shadow: 0 0 18px rgba(0,207,255,0.25);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =====================================
+   TOP SECTION
+===================================== */
+
+.top-section{
+  width:100%;
+  max-width:1500px;
+
+  margin:0 auto;
+
+  padding:80px 60px;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  gap:60px;
+
+  box-sizing:border-box;
 }
 
+/* =====================================
+   LEFT JAVA
+===================================== */
+
+.left-java{
+  flex-shrink:0;
+  text-align:center;
+}
+
+.left-java img{
+  width:90px;
+  height:90px;
+  object-fit:contain;
+}
+
+.left-java h2{
+  margin-top:10px;
+
+  color:#00cfff;
+
+  font-size:28px;
+  font-weight:900;
+
+  text-shadow:
+    0 0 15px rgba(0,207,255,.25);
+}
+
+/* =====================================
+   CENTER TITLE
+===================================== */
+
 .center-title{
+  flex:1;
+  max-width:700px;
   text-align:center;
 }
 
 .center-title h1{
-  font-size:54px;
-  font-weight:900;
-  line-height:1.08;
-  letter-spacing:0.2px;
+  margin:0 0 20px;
+
+  font-size:4rem;
+  font-weight:800;
+  line-height:1.15;
+
+  color:#fff;
 }
 
-.center-title span{
-  background: linear-gradient(90deg, var(--kshala-primary), var(--kshala-secondary));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  text-shadow:0 0 22px rgba(255,140,0,0.30);
+.center-title h1 span{
+  color:#ff9d00;
 }
 
 .center-title p{
-  color: var(--kshala-text-muted);
-  font-size:18px;
-  margin-top:14px;
-  line-height:1.7;
-  max-width:720px;
-  margin-left:auto;
-  margin-right:auto;
+  margin:0;
+
+  color:#d0d0d0;
+
+  font-size:1.4rem;
+  line-height:1.8;
 }
+
+/* =====================================
+   VIDEO
+===================================== */
+
+.course-video{
+  flex-shrink:0;
+
+  width:500px;
+}
+
+.course-video video{
+  width:100%;
+  height:280px;
+
+  object-fit:cover;
+
+  border-radius:24px;
+
+  border:2px solid rgba(255,153,0,.25);
+
+  box-shadow:
+    0 0 25px rgba(255,153,0,.25),
+    0 0 60px rgba(255,153,0,.12);
+
+  transition:.4s ease;
+}
+
+.course-video video:hover{
+  transform:scale(1.03);
+
+  box-shadow:
+    0 0 35px rgba(255,153,0,.35),
+    0 0 80px rgba(255,153,0,.20);
+}
+
+/* =====================================
+   TABLET
+===================================== */
+
+@media (max-width:1100px){
+
+  .top-section{
+    gap:40px;
+    padding:60px 30px;
+  }
+
+  .center-title h1{
+    font-size:3rem;
+  }
+
+  .center-title p{
+    font-size:1.15rem;
+  }
+
+  .course-video{
+    width:380px;
+  }
+
+  .course-video video{
+    height:220px;
+  }
+}
+
+/* =====================================
+   MOBILE
+===================================== */
+
+@media (max-width:768px){
+
+  .top-section{
+    flex-direction:column;
+
+    gap:20px;
+
+    padding:30px 18px;
+  }
+
+  .left-java{
+    width:100%;
+  }
+
+  .left-java img{
+    width:70px;
+    height:70px;
+  }
+
+  .left-java h2{
+    font-size:24px;
+    margin-top:8px;
+  }
+
+  .center-title{
+    width:100%;
+    max-width:100%;
+  }
+
+  .center-title h1{
+    font-size:2.3rem;
+    line-height:1.2;
+    margin-bottom:15px;
+  }
+
+  .center-title p{
+    font-size:1rem;
+    line-height:1.6;
+    padding:0 5px;
+  }
+
+  .course-video{
+    width:100%;
+    max-width:420px;
+  }
+
+  .course-video video{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+    border-radius:20px;
+  }
+}
+
+/* =====================================
+   SMALL PHONES
+===================================== */
+
+@media (max-width:480px){
+
+  .top-section{
+    padding:25px 12px;
+  }
+
+  .center-title h1{
+    font-size:1.9rem;
+  }
+
+  .center-title p{
+    font-size:.95rem;
+  }
+
+  .course-video video{
+    height:190px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .right-image{
   display:flex;
@@ -240,103 +443,9 @@ body{
   color: var(--kshala-primary);
 }
 
-/* Internship section polish */
-.internship-wrapper {
-  margin-top: 18px;
-  position: relative;
-  width: 100%;
-  min-height: 210px;
-  overflow: hidden;
 
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 30px;
-  border-radius: 22px;
-  background: rgba(8, 20, 40, 0.35);
-  border:1px solid rgba(255,140,0,0.18);
-  box-shadow:
-    0 0 0 1px rgba(255,140,0,0.05) inset,
-    0 0 30px rgba(255,140,0,0.10);
-}
 
-.internship-wrapper::after{
-  content:"";
-  position:absolute;
-  inset:-2px;
-  pointer-events:none;
-  background:
-    radial-gradient(circle at 20% 20%, rgba(255,140,0,0.16), transparent 35%),
-    radial-gradient(circle at 70% 60%, rgba(0,207,255,0.10), transparent 42%);
-  z-index:0;
-}
 
-.internship-wrapper > *{ position:relative; z-index:1; }
-
-.module-badge {
-  position: absolute;
-  top: 14px;
-  left: 18px;
-  background: linear-gradient(90deg, var(--kshala-primary), var(--kshala-secondary));
-  color: #081018;
-  padding: 8px 16px;
-  border-radius: 10px;
-  font-size: 16px;
-  font-weight: 900;
-  letter-spacing:0.5px;
-  box-shadow: 0 0 26px rgba(255,140,0,0.22);
-}
-
-.internship-content {
-  text-align: center;
-  z-index: 2;
-  max-width: 680px;
-}
-
-.internship-content h1 {
-  color: white;
-  font-size: 36px;
-  font-weight: 900;
-  margin-top: 12px;
-}
-
-.internship-content p {
-  color: rgba(255,255,255,0.82);
-  font-size: 18px;
-  line-height: 1.65;
-  margin-top: 12px;
-}
-
-.icon-circle {
-  width: 70px;
-  height: 70px;
-  margin: auto;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
-  background: linear-gradient(135deg, var(--kshala-primary), var(--kshala-secondary));
-  font-size: 34px;
-  box-shadow: 0 0 28px rgba(255,140,0,0.35);
-}
-
-.left-building {
-  position: absolute;
-  left: 160px;
-  bottom: 32px;
-  width: 180px;
-  opacity: 0.92;
-  filter: drop-shadow(0 0 18px rgba(255,140,0,0.10));
-}
-
-.right-certificate {
-  position: absolute;
-  right: 190px;
-  bottom: 52px;
-  width: 160px;
-  opacity: 0.95;
-  filter: drop-shadow(0 0 18px rgba(255,140,0,0.10));
-}
 
 @media (max-width: 960px) {
   .top-section{
@@ -357,11 +466,11 @@ body{
   .cards-row{ grid-template-columns: 1fr; }
   .card h3{ font-size: 20px; }
   .card ul li{ font-size: 15px; }
-
+  
   .internship-wrapper{ padding: 40px 20px; }
   .internship-content h1{ font-size: 28px; }
   .internship-content p{ font-size: 16px; }
-
+  
   .left-building,
   .right-certificate {
     width: 105px;
@@ -390,64 +499,310 @@ body{
 
 
 
-.top-section {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 40px;
-  padding: 40px 60px;
-  flex-wrap: wrap;
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =========================================
+   INTERNSHIP WRAPPER
+========================================= */
+
+.internship-wrapper{
+  position:relative;
+
+  width:100%;
+  max-width:1400px;
+
+  margin:40px auto;
+
+  padding:80px 40px 50px;
+
+  border-radius:28px;
+
+  overflow:hidden;
+
+  background:rgba(8,20,40,.35);
+
+  border:1px solid rgba(255,140,0,.18);
+
+  box-shadow:
+    0 0 0 1px rgba(255,140,0,.05) inset,
+    0 0 30px rgba(255,140,0,.10);
 }
 
-.center-title {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
+.internship-wrapper::after{
+  content:"";
+
+  position:absolute;
+  inset:0;
+
+  background:
+    radial-gradient(circle at 15% 20%,
+    rgba(255,140,0,.14),
+    transparent 35%),
+
+    radial-gradient(circle at 85% 70%,
+    rgba(0,207,255,.10),
+    transparent 40%);
+
+  pointer-events:none;
 }
 
-.course-video {
-  width: 100%;
-  margin-top: 25px;
-  display: flex;
-  justify-content: center;
+/* =========================================
+   MODULE BADGE
+========================================= */
+
+.module-badge{
+  position:absolute;
+
+  top:20px;
+  left:20px;
+
+  padding:10px 18px;
+
+  border-radius:12px;
+
+  background:linear-gradient(
+    135deg,
+    #ff9800,
+    #ffb300
+  );
+
+  color:#081018;
+
+  font-size:15px;
+  font-weight:900;
+
+  box-shadow:
+    0 0 25px rgba(255,140,0,.25);
 }
 
-.course-video video {
-  width: 100%;
-  max-width: 850px;
-  border-radius: 20px;
-  object-fit: contain;
-  box-shadow: 0 15px 40px rgba(0,0,0,0.35);
+/* =========================================
+   MAIN SECTION
+========================================= */
+
+.internship-section{
+  position:relative;
+  z-index:2;
+
+  max-width:950px;
+
+  margin:auto;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  gap:30px;
+
+  padding:45px;
+
+  border-radius:26px;
+
+  background:linear-gradient(
+    135deg,
+    rgba(10,18,40,.95),
+    rgba(12,35,65,.90)
+  );
+
+  border:1px solid rgba(255,166,0,.15);
 }
 
-/* LEFT IMAGE */
-.left-java {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+/* =========================================
+   ICON
+========================================= */
+
+.icon-circle{
+  width:90px;
+  height:90px;
+
+  min-width:90px;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  border-radius:50%;
+
+  font-size:2rem;
+
+  background:linear-gradient(
+    135deg,
+    #ff9800,
+    #ffb300
+  );
+
+  box-shadow:
+    0 8px 20px rgba(255,166,0,.25);
 }
 
-/* RIGHT IMAGE */
-.right-image img {
-  width: 280px;
-  max-width: 100%;
+/* =========================================
+   CONTENT
+========================================= */
+
+.internship-content{
+  flex:1;
+  text-align:center;
 }
 
-/* MOBILE */
-@media (max-width: 768px) {
-  .top-section {
-    flex-direction: column;
-    padding: 20px;
-    gap: 25px;
+.internship-content h1{
+  color:#fff;
+
+  font-size:3rem;
+  font-weight:900;
+
+  margin-bottom:18px;
+}
+
+.internship-content p{
+  color:#d6d6d6;
+
+  font-size:1.15rem;
+  line-height:1.8;
+
+  max-width:700px;
+  margin:auto;
+}
+
+/* =========================================
+   SIDE IMAGES
+========================================= */
+
+.left-building{
+  position:absolute;
+
+  left:30px;
+  bottom:25px;
+
+  width:140px;
+
+  opacity:.9;
+
+  z-index:1;
+}
+
+.right-certificate{
+  position:absolute;
+
+  right:30px;
+  bottom:25px;
+
+  width:130px;
+
+  opacity:.95;
+
+  z-index:1;
+}
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width:1024px){
+
+  .internship-wrapper{
+    padding:80px 25px 40px;
   }
 
-  .course-video video {
-    width: 100%;
+  .internship-section{
+    padding:35px;
   }
 
-  .right-image img {
-    width: 220px;
+  .internship-content h1{
+    font-size:2.4rem;
+  }
+
+  .internship-content p{
+    font-size:1.05rem;
+  }
+
+  .left-building,
+  .right-certificate{
+    width:100px;
+  }
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width:768px){
+
+  .internship-wrapper{
+    padding:70px 15px 25px;
+  }
+
+  .module-badge{
+    position:relative;
+
+    top:auto;
+    left:auto;
+
+    display:inline-block;
+
+    margin-bottom:20px;
+  }
+
+  .internship-section{
+    flex-direction:column;
+
+    gap:20px;
+
+    padding:25px 20px;
+
+    text-align:center;
+  }
+
+  .icon-circle{
+    width:70px;
+    height:70px;
+    min-width:70px;
+
+    font-size:1.6rem;
+  }
+
+  .internship-content h1{
+    font-size:2rem;
+    margin-bottom:12px;
+  }
+
+  .internship-content p{
+    font-size:.95rem;
+    line-height:1.7;
+  }
+
+  /* Hide side images on phones */
+  .left-building,
+  .right-certificate{
+    display:none;
+  }
+}
+
+/* =========================================
+   SMALL PHONES
+========================================= */
+
+@media (max-width:480px){
+
+  .internship-content h1{
+    font-size:1.7rem;
+  }
+
+  .internship-content p{
+    font-size:.9rem;
+  }
+
+  .module-badge{
+    font-size:13px;
+    padding:8px 14px;
   }
 }

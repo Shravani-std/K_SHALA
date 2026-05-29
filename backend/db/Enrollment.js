@@ -81,6 +81,7 @@ const EnrollmentSchema = new mongoose.Schema(
         "10th",
         "12th",
         "Diploma",
+        "Graduate",
         "Undergraduate",
         "Postgraduate",
         "PhD",

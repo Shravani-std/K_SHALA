@@ -7,7 +7,7 @@ import React from "react";
 
 import "./SoftwareTestingSyllabus.css";
 import BackButton from "../components/BackButton";
-
+import video from "./video/software_testing.mp4";
 const SoftwareTestingSyllabus = () => {
   return (
     <div className="syllabus-container">
@@ -23,9 +23,26 @@ const SoftwareTestingSyllabus = () => {
           <h1>Software <span>Testing Syllabus</span></h1>
           <p>Learn manual testing methodologies and automated testing using Selenium, JUnit, and modern CI/CD tools.</p>
         </div>
-        <div className="right-image">
-            <img src={laptopcode} alt="Coding"/>
-        </div>
+
+
+           {/* VIDEO */}
+          <div className="course-video">
+            <video
+              autoPlay
+              muted
+              loop
+              controls
+              playsInline
+            >
+              <source
+                src={video}
+                type="video/mp4"
+              />
+              Your browser does not support the video tag.
+            </video>
+          </div>
+
+
       </div>
 
 
@@ -164,7 +181,7 @@ const SoftwareTestingSyllabus = () => {
 
       <div className="internship-wrapper">
       <div className="module-badge">MODULE - 5 to MODULE - 7</div>
-      <img src={leftbulding} alt="building" className="left-building" />
+      {/* <img src={leftbulding} alt="building" className="left-building" /> */}
       <div className="internship-content">
         <div className="icon-circle">💼</div>
         <h1>Onsite Internship</h1>
@@ -172,7 +189,7 @@ const SoftwareTestingSyllabus = () => {
 <li>Live Testing Projects</li><li>Real-Time Defect Tracking</li><li>Client Communication</li><li>Agile Team Collaboration</li><li>Automation Script Development</li><li>Test Execution & Reporting</li><li>Internship Certification</li>
         </ul>
       </div>
-      <img src={Certificate} alt="certificate" className="right-certificate" /> 
+      {/* <img src={Certificate} alt="certificate" className="right-certificate" />  */}
     </div>
       
     </div>

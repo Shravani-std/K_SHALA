@@ -7,7 +7,7 @@ import React from "react";
 
 import "./AppSupportSyllabus.css";
 import BackButton from "../components/BackButton";
-
+import video from "./video/K Shala Application support Program _1080p_caption.mp4";
 const AppSupportSyllabus = () => {
   return (
     <div className="syllabus-container">
@@ -23,9 +23,31 @@ const AppSupportSyllabus = () => {
           <h1>Application <span>& Production Support</span></h1>
           <p>Gain expertise in maintaining, troubleshooting, and supporting enterprise applications in production environments.</p>
         </div>
-        <div className="right-image">
-            <img src={laptopcode} alt="Coding"/>
-        </div>
+
+
+        
+             {/* VIDEO */}
+          <div className="course-video">
+            <video
+              autoPlay
+              muted
+              loop
+              controls
+              playsInline
+            >
+              <source
+                src={video}
+                type="video/mp4"
+              />
+              Your browser does not support the video tag.
+            </video>
+          </div>
+
+
+
+
+
+
       </div>
 
       <div className="module-wrapper">
@@ -200,7 +222,7 @@ const AppSupportSyllabus = () => {
 
       <div className="internship-wrapper">
       <div className="module-badge">MODULE - 6 to MODULE - 7</div>
-      <img src={leftbulding} alt="building" className="left-building" />
+      {/* <img src={leftbulding} alt="building" className="left-building" /> */}
       <div className="internship-content">
         <div className="icon-circle">💼</div>
         <h1>Internship & Live Projects</h1>
@@ -208,7 +230,7 @@ const AppSupportSyllabus = () => {
           <li>Real-Time Application Support</li><li>Incident Resolution Practice</li><li>SQL & Linux Troubleshooting</li><li>Monitoring Dashboard Usage</li><li>Ticket Handling Practice</li><li>Client Interaction</li><li>Agile Team Collaboration</li><li>Internship Certification</li>
         </ul>
       </div>
-      <img src={Certificate} alt="certificate" className="right-certificate" /> 
+      {/* <img src={Certificate} alt="certificate" className="right-certificate" />  */}
     </div>
       
     </div>

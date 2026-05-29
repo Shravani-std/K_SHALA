@@ -7,7 +7,7 @@ const Enrollment = require("../db/Enrollment");
 
 // CREATE ENROLLMENT
 router.post("/enroll", async (req, res) => {
-
+  console.log("BODY RECEIVED:", req.body);
   try {
 
     console.log(req.body);
@@ -24,17 +24,21 @@ router.post("/enroll", async (req, res) => {
       message: "Enrollment Submitted Successfully",
     });
 
-  } catch (error) {
+  } 
+  catch (error) {
 
-    console.error("Enrollment Error:", error);
-
-    return res.status(500).json({
+  if (error.code === 11000) {
+    return res.status(400).json({
       success: false,
-      message: "Internal Server Error",
-      error: error.message,
+      message: "This email is already enrolled.",
     });
-
   }
+
+  return res.status(500).json({
+    success: false,
+    message: error.message,
+  });
+}
 
 });
 

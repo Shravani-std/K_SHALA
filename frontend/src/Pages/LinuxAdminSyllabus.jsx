@@ -8,7 +8,7 @@ import React from "react";
 
 import "./LinuxAdminSyllabus.css";
 import BackButton from "../components/BackButton";
-
+import video from "./video/LinuxAdmin.mp4";
 const LinuxAdminSyllabus = () => {
   return (
     <div className="syllabus-container">
@@ -24,9 +24,24 @@ const LinuxAdminSyllabus = () => {
           <h1>Linux <span>Administration Course Modules</span></h1>
           <p>Master Linux system administration, shell scripting, networking, security, and server management.</p>
         </div>
-        <div className="right-image">
-            <img src={laptopcode} alt="Coding"/>
-        </div>
+
+           {/* VIDEO */}
+          <div className="course-video">
+            <video
+              autoPlay
+              muted
+              loop
+              controls
+              playsInline
+            >
+              <source
+                src={video}
+                type="video/mp4"
+              />
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          
       </div>
 
       <div className="module-wrapper">
@@ -206,19 +221,52 @@ const LinuxAdminSyllabus = () => {
         </div>
       </div>
 
-      <div className="internship-wrapper">
-      <div className="module-badge">MODULE - 6 to MODULE - 7</div>
-      <img src={leftbulding} alt="building" className="left-building" />
-      <div className="internship-content">
-        <div className="icon-circle">💼</div>
-        <h1>Real-Time Projects & Internship</h1>
-        <ul>
-          <li>Live Server Management</li><li>User Administration</li><li>Web Server Deployment</li><li>Network Troubleshooting</li><li>Shell Script Development</li><li>Monitoring & Reporting</li><li>Client Communication</li><li>Internship Certification</li>
-        </ul>
-      </div>
-      <img src={Certificate} alt="certificate" className="right-certificate" /> 
+
+
+
+
+     <div className="internship-wrapper">
+
+  <div className="module-badge">
+    MODULE - 6 to MODULE - 7
+  </div>
+
+  {/* <img src={leftbulding} alt="building" className="left-building" /> */}
+
+  <div className="internship-section">
+
+    <div className="icon-circle">
+      💼
     </div>
-      
+
+    <div className="internship-content">
+
+      <h1>Real-Time Projects & Internship</h1>
+
+      <ul>
+        <li>Live Server Management</li>
+        <li>User Administration</li>
+        <li>Web Server Deployment</li>
+        <li>Network Troubleshooting</li>
+        <li>Shell Script Development</li>
+        <li>Monitoring & Reporting</li>
+        <li>Client Communication</li>
+        <li>Internship Certification</li>
+      </ul>
+
+    </div>
+
+  </div>
+
+  {/* <img src={Certificate} alt="certificate" className="right-certificate" /> */}
+
+</div>
+
+
+
+
+
+
     </div>
   );
 };
