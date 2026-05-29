@@ -174,6 +174,8 @@ const Contact = () => {
 
   return (
     <div className="homepage contact-page">
+
+
       <nav className="navbar">
         <Link to="/" className="logo contact-logo-link">
           <div className="logo-box">
@@ -207,11 +209,16 @@ const Contact = () => {
         </ul>
       </nav>
 
+
+
+
       <main className="contact-main">
         {!submitted ? (
           <>
             <BackButton />
+
             <section className="contact-hero">
+
   <h1 className="contact-hero-title">
     Let&apos;s Build Something Extraordinary
   </h1>

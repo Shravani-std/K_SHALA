@@ -1,3 +1,22 @@
+.back-btn-wrapper {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 20px 40px 10px;
+
+  display: flex;
+  justify-content: flex-start;
+}
+
+.back-btn {
+  position: static !important;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .back-btn-wrapper {
+    padding: 15px 20px 5px;
+  }
+}
 .contact-page {
   min-height: 100vh;
 }
