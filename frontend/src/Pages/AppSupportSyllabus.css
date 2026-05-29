@@ -1,3 +1,40 @@
 
 /* Import base styles from Java syllabus */
 @import "./JavaFullStackSyllabus.css";
+
+.internship-content ul{
+  margin-top:20px;
+  padding:0;
+
+  list-style:none;
+
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+
+  gap:12px 25px;
+
+  text-align:left;
+}
+
+.internship-content ul li{
+  color:#e5e5e5;
+
+  font-size:1rem;
+  font-weight:500;
+
+  padding:10px 14px;
+
+  border-radius:12px;
+
+  background:rgba(255,255,255,0.05);
+
+  border:1px solid rgba(255,166,0,0.15);
+}
+
+@media (max-width:768px){
+
+  .internship-content ul{
+    grid-template-columns:1fr;
+  }
+
+}
