@@ -132,6 +132,22 @@ body {
   box-shadow: 0 4px 24px rgba(0, 0, 0, 0.25);
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .logo {
   display: flex;
   align-items: center;
@@ -140,10 +156,10 @@ body {
 
 /* CIRCLE CONTAINER */
 .logo-box {
-  width: 58px;
-  height: 58px;
+  width: 50px;
+  height: 50px;
 
-  border-radius: 50%;
+  /* border-radius: 0%; */
 
   overflow: hidden;
 
@@ -169,7 +185,7 @@ body {
 
   object-fit: cover;
 
-  border-radius: 50%;
+  border-radius: 0%;
 
   display: block;
 }
@@ -194,6 +210,19 @@ body {
   gap: 32px;
   align-items: center;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* Nav Items */
 .nav-links li {
@@ -412,104 +441,273 @@ body {
   color: var(--accent-orange);
   box-shadow: 0 0 18px rgba(255, 159, 28, 0.22);
 }
-/* ── Stats Container ── */
-/* ───────── STATS CONTAINER ───────── */
-.stats-container {
-  width: 90%;
-  max-width: 1200px;
-
-  margin: 40px auto 60px;
-
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-
-  padding: 22px 26px;
-
-  border-radius: 22px;
-
-  background: var(--card-bg-solid);
-
-  border: 1px solid rgba(255,255,255,0.08);
-
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-
-  box-shadow:
-    0 0 25px rgba(255,122,0,0.06),
-    inset 0 0 20px rgba(255,255,255,0.02);
+.stat-card:not(:last-child) {
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-/* ───────── CARD ───────── */
+@media (max-width: 1200px) {
+  .stat-card:not(:last-child) {
+    border-right: none;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ===========================
+   Stats Section
+=========================== */
+
+.stats-container {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 20px 30px;
+
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  align-items: center;
+
+  background: rgba(8, 18, 45, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 24px;
+
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+
+  gap: 0;
+}
 .stat-card {
   display: flex;
   align-items: center;
-
   gap: 16px;
-
-  padding: 0 10px;
-
-  min-width: 170px;
+  padding: 0 24px;
+  position: relative;
 }
 
-/* ───────── DIVIDER ───────── */
-.divider {
+.stat-card:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
   width: 1px;
-  height: 46px;
-
-  background: rgba(255,255,255,0.10);
+  height: 70px;
+  background: rgba(255,255,255,0.12);
 }
 
-/* ───────── ICON ───────── */
+@media (max-width: 1200px) {
+  .stat-card:not(:last-child)::after {
+    display: none;
+  }
+}
 .icon {
-  width: 60px;
-  height: 60px;
+  width: 70px;
+  height: 70px;
 
-  border-radius: 18px;
+  border-radius: 20px;
 
   display: flex;
   align-items: center;
   justify-content: center;
 
-  font-size: 22px;
-  color: white;
+  font-size: 30px;
+  color: #fff;
 
   flex-shrink: 0;
 }
 
-/* ───────── TEXT ───────── */
-.text {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+/* Icon Colors */
+
+.icon.purple {
+  background: linear-gradient(135deg, #ffb347, #ff8c00);
+}
+
+.icon.pink {
+  background: linear-gradient(135deg, #d4e6ff, #33bdf2);
+}
+
+.icon.cyan {
+  background: linear-gradient(135deg, #24c6dc, #0072ff);
+}
+
+.icon.orange {
+  background: linear-gradient(135deg, #ffb347, #ff8c00);
+}
+
+.icon.gold {
+  background: linear-gradient(135deg, #ffb347, #ff8c00);
 }
 
 .text h2 {
-  margin: 0;
-
-  font-size: 20px;
-  font-weight: 700;
-
   color: #fff;
-
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 0;
   line-height: 1.1;
 }
 
 .text p {
-  margin: 4px 0 0;
-
-  font-size: 15px;
-  font-weight: 400;
-
-  color: rgba(255,255,255,0.75);
-
+  color: rgba(255, 255, 255, 0.75);
+  margin-top: 4px;
+  font-size: 1rem;
   white-space: nowrap;
 }
-.purple { background: linear-gradient(135deg, var(--primary-cyan), var(--secondary-blue)); }
-.pink   { background: linear-gradient(135deg, var(--accent-cyan), #0ea5e9); }
-.cyan   { background: linear-gradient(135deg, #06b6d4, #0284c7); }
-.orange { background: linear-gradient(135deg, var(--accent-orange), #ffb347); }
-.gold   { background: linear-gradient(135deg, #fbbf24, var(--accent-orange)); }
+
+/* .divider {
+  width: 1px;
+  height: 70px;
+  background: rgba(255, 255, 255, 0.12);
+  justify-self: center;
+} */
+
+/* ===========================
+   Large Tablets (iPad Pro)
+=========================== */
+
+@media (max-width: 1200px) {
+  .stats-container {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+
+  .divider {
+    display: none;
+  }
+
+  .stat-card {
+    border-right: none;
+  }
+}
+
+/* ===========================
+   Tablets (iPad / Galaxy Tab)
+=========================== */
+
+@media (max-width: 992px) {
+  .stats-container {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 25px;
+  }
+
+  .icon {
+    width: 60px;
+    height: 60px;
+    font-size: 26px;
+  }
+
+  .text h2 {
+    font-size: 1.7rem;
+  }
+
+  .text p {
+    font-size: 0.95rem;
+  }
+}
+
+/* ===========================
+   Mobile Devices
+=========================== */
+
+@media (max-width: 768px) {
+  .stats-container {
+    grid-template-columns: 1fr;
+    padding: 20px;
+    gap: 15px;
+  }
+
+  .stat-card {
+    justify-content: flex-start;
+    padding: 12px;
+    border-radius: 16px;
+
+    background: rgba(255, 255, 255, 0.03);
+  }
+
+  .icon {
+    width: 55px;
+    height: 55px;
+    font-size: 24px;
+    border-radius: 16px;
+  }
+
+  .text h2 {
+    font-size: 1.5rem;
+  }
+
+  .text p {
+    font-size: 0.9rem;
+  }
+}
+
+/* ===========================
+   Small iPhones
+=========================== */
+
+@media (max-width: 480px) {
+  .stats-container {
+    padding: 15px;
+  }
+
+  .stat-card {
+    gap: 12px;
+  }
+
+  .icon {
+    width: 50px;
+    height: 50px;
+    font-size: 22px;
+  }
+
+  .text h2 {
+    font-size: 1.3rem;
+  }
+
+  .text p {
+    font-size: 0.85rem;
+  }
+}
+
+/* iOS Safari Fixes */
+@supports (-webkit-touch-callout: none) {
+  .stats-container {
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /* ── Hero Right ── */
@@ -1244,7 +1442,7 @@ body {
 
 .footer-overlay { max-width: 1200px; margin: auto; }
 
-.footer-section h3 {
+.footer-section p {
   color: white;
   font-size: 15px;
   font-weight: 600;
@@ -1334,28 +1532,6 @@ body {
   .student-img { max-width: 86%; }
 }
 
-/* Mobile: horizontal scroll */
-@media (max-width: 768px) {
-  .stats-container {
-    width: 95%;
-    justify-content: flex-start;
-    overflow-x: auto;
-    overflow-y: hidden;
-    scrollbar-width: none;
-    gap: 0;
-    padding: 16px 20px;
-  }
-
-  .stats-container::-webkit-scrollbar { display: none; }
-
-  .stat-card {
-    min-width: 160px;
-    flex-shrink: 0;
-    justify-content: flex-start;
-  }
-
-  .divider { display: none; }
-}
 
 /* Reduced Motion */
 @media (prefers-reduced-motion: reduce) {

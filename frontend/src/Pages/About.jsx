@@ -12,7 +12,7 @@ import {
   FaBullseye,
 } from "react-icons/fa";
 
-import logo from "./images/logon.webp";
+import logo from "./images/Main_logo.jpeg";
 import Footer from "./Footer";
 import BackButton from "../components/BackButton";
 

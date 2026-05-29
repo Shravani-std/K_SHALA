@@ -4,7 +4,8 @@ import {
   FaEnvelope,
   FaPhoneAlt,
   FaMapMarkerAlt,
-} from "react-icons/fa";import logo from "./images/logon.webp";
+} from "react-icons/fa";
+import logo from "./images/Main_logo.jpeg";
 import Footer from "./Footer";
 import BackButton from "../components/BackButton";
 import "./Home.css";
@@ -38,7 +39,7 @@ const CONTACT_CARDS = [
   {
     icon: FaMapMarkerAlt,
     label: "Location",
-    value: "102 VBC Wagholi Pune 412207",
+    value: "Office 102 Tower B1 VBC Wagholi Pune 412207",
     href: null,
   },
 ];

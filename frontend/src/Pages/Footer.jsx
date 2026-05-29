@@ -5,10 +5,9 @@ import "./Home.css";
 const Footer = () => (
   <footer className="footer-section">
     <div className="footer-overlay">
-      <h3>
-        COPYRIGHT © 2016 – 2026 KSHETRAPATI INDUSTRIES PVT LTD. ALL RIGHTS
-        RESERVED.
-      </h3>
+      <p>
+  © {new Date().getFullYear()} – LEARN TODAY, LEAD TOMORROW. ALL RIGHTS RESERVED
+</p>
 
       <div className="footer-links">
         <Link to="/">Home</Link>

@@ -12,7 +12,7 @@ import {
 import { FaBars, FaTimes } from "react-icons/fa";
 import React, { useRef, useState } from "react";
 import herobg from "./images/Herobg.webp";
-import logo from "./images/logon.webp";
+import logo from "./images/Main_logo.jpeg";
 import applink from "./images/applink.webp";
 
 import b1 from "./images/b1.webp";
@@ -159,8 +159,10 @@ const Home = () => {
     <div className="homepage">
 
       {/* NAVBAR */}
-      {/* NAVBAR */}
 <nav className="navbar">
+
+
+
 
   <div className="logo">
 
@@ -171,6 +173,8 @@ const Home = () => {
         className="logo-img"
       />
     </div>
+
+
 
     <div>
       <h2>K-Shala</h2>
@@ -264,72 +268,62 @@ const Home = () => {
       </section>
 
       {/* STATS SECTION */}
-      <div className="stats-container">
+<div className="stats-container">
 
-        <div className="stat-card">
-          <div className="icon purple">
-            <FaStar />
-          </div>
+  <div className="stat-card">
+    <div className="icon purple">
+      <FaStar />
+    </div>
+    <div className="text">
+      <h2>1M+</h2>
+      <p>Students Learning</p>
+    </div>
+  </div>
 
-          <div className="text">
-            <h2>1M+</h2>
-            <p>Students Learning</p>
-          </div>
-        </div>
+  <div className="stat-card">
+    <div className="icon pink">
+      <FaPlay />
+    </div>
+    <div className="text">
+      <h2>50K+</h2>
+      <p>Video Lessons</p>
+    </div>
+  </div>
 
-        <div className="divider"></div>
+  <div className="stat-card">
+    <div className="icon cyan">
+      <FaQuestionCircle />
+    </div>
+    <div className="text">
+      <h2>100K+</h2>
+      <p>Practice Tests</p>
+    </div>
+  </div>
 
-        <div className="stat-card">
-          <div className="icon pink">
-            <FaPlay />
-          </div>
+  <div className="stat-card">
+    <div className="icon orange">
+      <FaUserGraduate />
+    </div>
+    <div className="text">
+      <h2>500+</h2>
+      <p>Expert Teachers</p>
+    </div>
+  </div>
 
-          <div className="text">
-            <h2>50K+</h2>
-            <p>Video Lessons</p>
-          </div>
-        </div>
+  <div className="stat-card">
+    <div className="icon gold">
+      <FaStar />
+    </div>
+    <div className="text">
+      <h2>4.8/5</h2>
+      <p>Parent Rating</p>
+    </div>
+  </div>
 
-        <div className="divider"></div>
+</div>
 
-        <div className="stat-card">
-          <div className="icon cyan">
-            <FaQuestionCircle />
-          </div>
 
-          <div className="text">
-            <h2>100K+</h2>
-            <p>Practice Tests</p>
-          </div>
-        </div>
 
-        <div className="divider"></div>
-
-        <div className="stat-card">
-          <div className="icon orange">
-            <FaUserGraduate />
-          </div>
-
-          <div className="text">
-            <h2>500+</h2>
-            <p>Expert Teachers</p>
-          </div>
-        </div>
-
-        <div className="divider"></div>
-
-        <div className="stat-card">
-          <div className="icon gold">
-            <FaStar />
-          </div>
-
-          <div className="text">
-            <h2>4.8/5</h2>
-            <p>Parent Rating</p>
-          </div>
-        </div>
-
-      </div>
 
       {/* VIDEO SECTION */}
      <section
