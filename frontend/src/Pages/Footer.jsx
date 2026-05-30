@@ -6,7 +6,7 @@ const Footer = () => (
   <footer className="footer-section">
     <div className="footer-overlay">
       <p>
-  © {new Date().getFullYear()} – LEARN TODAY, LEAD TOMORROW. ALL RIGHTS RESERVED
+  © {new Date().getFullYear()} K Shala – LEARN TODAY, LEAD TOMORROW. ALL RIGHTS RESERVED
 </p>
 
       <div className="footer-links">

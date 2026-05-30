@@ -4,7 +4,7 @@ import LegalPageLayout from "./LegalPageLayout";
 const Support = () => (
   <LegalPageLayout
     title="Support Center"
-    intro="Welcome to the Kshetrapati Industries Pvt Ltd Support Center. We're here to help you make the most of our e-learning platform and software solutions."
+intro="Welcome to the K-Shala Support Center. Whether you're a student, teacher, or lifelong learner, we're here to support your educational journey and help you get the most out of our learning platform."
   >
     <section className="legal-section">
       <h2>1. Getting Started</h2>
@@ -78,10 +78,10 @@ const Support = () => (
       <h2>6. Contact Us</h2>
       <p>
         Email:{" "}
-        <a href="mailto:contact@kshetrapati.info">contact@kshetrapati.info</a>
+        <a href="mailto:contact@k-shala.com">contact@k-shala.com</a>
       </p>
       <p>
-        Phone: <a href="tel:+917972657424">+91 7972657424</a>
+        Phone: <a href="tel:+918424067972">+91 8424067972</a>
       </p>
     </section>
 

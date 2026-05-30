@@ -6,7 +6,7 @@ const PrivacyPolicy = () => (
     <section className="legal-section">
       <h2>1. Introduction</h2>
       <p>
-        Kshetrapati Industries Pvt Ltd, we are committed to protecting your
+        K-Shala, we are committed to protecting your
         privacy. This Privacy Policy explains how we collect, use, disclose,
         and safeguard your information when you visit our website, use our
         e-learning platform, or purchase our software products. Please read this
@@ -108,13 +108,13 @@ const PrivacyPolicy = () => (
 
     <section className="legal-section legal-contact">
       <h2>10. Contact Us</h2>
-      <p>Kshetrapati Industries Pvt Ltd</p>
-      <p>C-103 Ajmera Exotica, Wagholi, Pune.</p>
+      <p>K-Shala</p>
+      <p>Office 102 Tower B1 VBC Wagholi Pune 412207</p>
       <p>
-        <a href="mailto:contact@kshetrapati.info">contact@kshetrapati.info</a>
+        <a href="mailto:contact@k-shala.com">contact@k-shala.com</a>
       </p>
       <p>
-        <a href="tel:+917972657424">+91 7972657424</a>
+        <a href="tel:++91 8424067972">+91 8424067972</a>
       </p>
     </section>
   </LegalPageLayout>

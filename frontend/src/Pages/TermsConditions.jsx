@@ -6,11 +6,8 @@ const TermsConditions = () => (
     <section className="legal-section">
       <h2>1. Acceptance of Terms</h2>
       <p>
-        By accessing or using the K-Shala website, e-learning platform, mobile
-        applications, or any software products provided by Kshetrapati Industries
-        Pvt Ltd (&quot;Company,&quot; &quot;we,&quot; &quot;us,&quot; or
-        &quot;our&quot;), you agree to be bound by these Terms &amp; Conditions.
-        If you do not agree to these terms, you must not use our services.
+       By accessing or using the K-Shala website, e-learning platform, mobile applications, or related software products, you agree to be bound by these Terms & Conditions. If you do not agree to these terms, you must not use the services.
+
       </p>
     </section>
 
@@ -173,14 +170,14 @@ const TermsConditions = () => (
     </section>
 
     <section className="legal-section legal-contact">
-      <h2>15. Contact Us</h2>
-      <p>Kshetrapati Industries Pvt Ltd</p>
-      <p>C-103 Ajmera Exotica, Wagholi, Pune.</p>
+      <h2>10. Contact Us</h2>
+      <p>K-Shala</p>
+      <p>Office 102 Tower B1 VBC Wagholi Pune 412207</p>
       <p>
-        <a href="mailto:contact@kshetrapati.info">contact@kshetrapati.info</a>
+        <a href="mailto:contact@k-shala.com">contact@k-shala.com</a>
       </p>
       <p>
-        <a href="tel:+917972657424">+91 7972657424</a>
+        <a href="tel:++91 8424067972">+91 8424067972</a>
       </p>
     </section>
   </LegalPageLayout>
