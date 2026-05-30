@@ -14,14 +14,6 @@ import "./Contact.css";
 const API_URL =
   import.meta.env.VITE_API_URL || "http://localhost:5000";
 
-const SERVICE_OPTIONS = [
-  "Web Development",
-  "App Development",
-  "AI & Machine Learning",
-  "E-Learning Solutions",
-  "Software Development",
-  "Other",
-];
 
 const CONTACT_CARDS = [
   {
@@ -49,7 +41,6 @@ const initialForm = {
   email: "",
   company: "",
   phone: "",
-  service: "",
   message: "",
 };
 
@@ -89,10 +80,6 @@ const Contact = () => {
         "Phone number must contain exactly 10 digits";
     }
 
-    // Service Validation
-    if (!form.service) {
-      newErrors.service = "Please select a service";
-    }
 
     // Message Validation
     if (!form.message.trim()) {
@@ -354,34 +341,7 @@ const Contact = () => {
                     </div>
                   </div>
 
-                  <div className="contact-field">
-                    <label>Service Interest</label>
-
-                    <select
-                      name="service"
-                      value={form.service}
-                      onChange={handleChange}
-                    >
-                      <option value="">
-                        Select a service
-                      </option>
-
-                      {SERVICE_OPTIONS.map((option) => (
-                        <option
-                          key={option}
-                          value={option}
-                        >
-                          {option}
-                        </option>
-                      ))}
-                    </select>
-
-                    {errors.service && (
-                      <small className="error-text">
-                        {errors.service}
-                      </small>
-                    )}
-                  </div>
+                
 
                   <div className="contact-field">
                     <label>Message</label>

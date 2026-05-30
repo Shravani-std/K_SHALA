@@ -28,12 +28,6 @@ const ContactSchema = new mongoose.Schema(
       default: "",
     },
 
-    service: {
-      type: String,
-      required: true,
-      trim: true,
-    },
-
     message: {
       type: String,
       required: true,

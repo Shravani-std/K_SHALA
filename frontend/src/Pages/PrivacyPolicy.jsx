@@ -32,10 +32,7 @@ const PrivacyPolicy = () => (
           our platform, including access times, pages viewed, and actions taken
           within the platform.
         </li>
-        <li>
-          <strong>Device Information:</strong> IP address, browser type,
-          operating system, and device identifiers.
-        </li>
+        
         <li>
           <strong>Cookies and Tracking Technologies:</strong> We use cookies and
           similar tracking technologies to enhance user experience and analyze
