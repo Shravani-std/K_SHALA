@@ -39,7 +39,6 @@ const CONTACT_CARDS = [
 const initialForm = {
   name: "",
   email: "",
-  company: "",
   phone: "",
   message: "",
 };
@@ -310,18 +309,7 @@ const Contact = () => {
                   </div>
 
                   <div className="contact-form-row">
-                    <div className="contact-field">
-                      <label>Company</label>
-
-                      <input
-                        type="text"
-                        name="company"
-                        value={form.company}
-                        onChange={handleChange}
-                        placeholder="Company Name"
-                      />
-                    </div>
-
+                   
                     <div className="contact-field">
                       <label>Phone</label>
 

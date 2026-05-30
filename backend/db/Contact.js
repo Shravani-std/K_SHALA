@@ -16,12 +16,6 @@ const ContactSchema = new mongoose.Schema(
       lowercase: true,
     },
 
-    company: {
-      type: String,
-      trim: true,
-      default: "",
-    },
-
     phone: {
       type: String,
       trim: true,
